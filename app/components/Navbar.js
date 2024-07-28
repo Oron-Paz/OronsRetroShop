@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link href="/" className="text-white font-bold text-xl">
           Your Logo
         </Link>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden sm:flex space-x-4">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -36,7 +36,7 @@ const Navbar = () => {
           ))}
         </div>
         <button
-          className="md:hidden text-white w-10 h-10 relative focus:outline-none"
+          className="sm:hidden text-white w-10 h-10 relative focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">Open main menu</span>
@@ -63,7 +63,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden absolute bg-gray-800 w-screen left-0 top-16 px-4">
+        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-16 px-4  transform transition duration-300 ease-in-out ">
           {navItems.map((item) => (
             <Link
               key={item.path}
