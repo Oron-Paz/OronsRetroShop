@@ -7,8 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'Sign In', path: '/signin' },
-  { name: 'Sign Up', path: '/signup' },
+  { name: 'Sign-In', path: '/signin' },
   { name: 'Cart', path: '/cart' },
 ];
 
@@ -17,10 +16,10 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-800 p-4 relative">
+    <nav className="bg-gray-800 p-3 relative">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white font-bold text-xl">
-          Your Logo
+          OronsRetroShop
         </Link>
         <div className="hidden sm:flex space-x-4">
           {navItems.map((item) => (
@@ -63,7 +62,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-16 px-4  transform transition duration-300 ease-in-out ">
+        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-13 px-4 ">
           {navItems.map((item) => (
             <Link
               key={item.path}
