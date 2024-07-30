@@ -1,16 +1,31 @@
 "use client"
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 
 export default function page() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const router = useRouter();
 
-  const handleSignIn = () => {
-    // Perform sign-in logic here
-    console.log('Signing in...');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password, rememberMe }),
+    });
+
+    if (response.ok) {
+      router.push('/store'); // Redirect to store page after successful login
+    } else {
+      const data = await response.json();
+      alert(data.message);
+    }
   };
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen -mt-10">
@@ -34,9 +49,18 @@ export default function page() {
           className="border border-gray-300 rounded px-2 py-1"
         />
 
+        <label>
+          <input
+            type="checkbox"
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+          />
+          Remember me
+        </label>
+
         <button
           type="button"
-          onClick={handleSignIn}
+          onClick={handleSubmit}
           className="bg-blue-500 text-white px-4 py-2 rounded"
         >
           Sign In
