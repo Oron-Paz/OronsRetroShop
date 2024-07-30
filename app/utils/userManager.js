@@ -12,7 +12,7 @@ function hashPassword(password) {
 }
 
 async function createUser(username, password) {
-    
+
   console.log(DATA_DIR);
   const userFile = path.join(DATA_DIR, `${username}.json`);
   console.log(userFile);
@@ -32,8 +32,11 @@ async function createUser(username, password) {
 
 async function getUser(username) {
   const userFile = path.join(DATA_DIR, `${username}.json`);
+  console.log(userFile);
   try {
+    console.log('reading file');
     const data = await fs.readFile(userFile, 'utf8');
+    console.log(data);
     return JSON.parse(data);
   } catch (error) {
     if (error.code === 'ENOENT') {

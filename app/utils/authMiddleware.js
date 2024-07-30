@@ -1,3 +1,4 @@
+
 const jwt = require('jsonwebtoken');
 
 const SECRET_KEY = 'your-secret-key'; // In a real app, use an environment variable

@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 
-export default function page() {
-  const [user, setUser] = useState('');
+export default function Page() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const router = useRouter();
@@ -19,9 +20,10 @@ export default function page() {
     });
 
     if (response.ok) {
-      router.push('/store'); // Redirect to store page after successful login
+      router.push('/'); // Redirect to store page after successful login
     } else {
       const data = await response.json();
+      // Show error message
       alert(data.message);
     }
   };
@@ -35,8 +37,8 @@ export default function page() {
         <input
           type="user"
           id="user"
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           className="border border-gray-300 rounded px-2 py-1"
         />
 
@@ -68,7 +70,7 @@ export default function page() {
       </form>
 
       <div className="mt-4">
-        <p>Don't have an account? <a href="/signup" className="text-blue-500">Sign up</a></p>
+        <p>Don't have an account? <Link href="/signup" className="text-blue-500">Sign up</Link></p>
       </div>
     </div>
   );

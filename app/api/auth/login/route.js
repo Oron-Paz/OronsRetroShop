@@ -1,5 +1,5 @@
-import { validateUser, addLoginActivity } from '@/utils/userManager';
-import { generateToken } from '@/utils/authMiddleware';
+import { validateUser, addLoginActivity } from '../../../utils/userManager';
+import { generateToken } from '../../../utils/authMiddleware';
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
