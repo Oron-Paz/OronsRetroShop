@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export function useAuth() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -17,6 +18,7 @@ export function useAuth() {
         if (response.ok) {
           const data = await response.json();
           setIsAuthenticated(data.authenticated);
+          
         } else {
           setIsAuthenticated(false);
         }
@@ -31,5 +33,21 @@ export function useAuth() {
     checkAuth();
   }, []);
 
-  return { isAuthenticated, isLoading };
+  const signout = async () => {
+    try {
+      const response = await fetch('/api/auth/signout', {
+        method: 'POST',
+        credentials: 'include',
+      });
+      if (response.ok) {
+        setIsAuthenticated(false);
+      } else {
+        console.error('Signout failed');
+      }
+    } catch (error) {
+      console.error('Signout failed:', error);
+    }
+  };
+
+  return { isAuthenticated, isLoading, signout };
 }

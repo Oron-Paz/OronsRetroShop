@@ -20,6 +20,7 @@ export default function Page() {
     });
 
     if (response.ok) {
+      router.refresh(); // This will refresh the current page
       router.push('/'); // Redirect to store page after successful login
     } else {
       const data = await response.json();

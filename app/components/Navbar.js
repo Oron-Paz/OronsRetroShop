@@ -9,15 +9,14 @@ import { useAuth } from '../hooks/useAuth';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading, signout } = useAuth();
 
   const navItems = useMemo(() => [
     { name: 'Home', path: '/' },
-    { name: isLoading ? 'Loading...' : (isAuthenticated ? 'Profile' : 'Sign-In'), 
-      path: isLoading ? '#' : (isAuthenticated ? '/profile' : '/signin') },
     { name: 'Cart', path: '/cart' },
+    { name: isLoading ? 'Loading...' : (isAuthenticated ? 'Profile' : 'Sign-In'), 
+      path: isLoading ? '#' : (isAuthenticated ? '/profile' : '/signin') }
   ], [isAuthenticated, isLoading]);
-
 
   return (
     <nav className="bg-gray-800 p-3 relative">
@@ -37,6 +36,14 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
+          {isAuthenticated && (
+            <button
+              onClick={signout}
+              className="text-white hover:text-gray-300"
+            >
+              Sign Out
+            </button>
+          )}
         </div>
         <button
           className="sm:hidden text-white w-10 h-10 relative focus:outline-none"
@@ -66,7 +73,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-13 px-4 ">
+        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-13 px-4">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -79,6 +86,17 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
+          {isAuthenticated && (
+            <button
+              onClick={() => {
+                signout();
+                setIsOpen(false);
+              }}
+              className="block text-white hover:text-gray-300 py-2"
+            >
+              Sign Out
+            </button>
+          )}
         </div>
       )}
     </nav>

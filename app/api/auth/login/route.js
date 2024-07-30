@@ -1,25 +1,31 @@
-// app/api/auth/login/route.js
+import { validateUser, addLoginActivity } from '../../../utils/userManager';
+import { generateToken } from '../../../utils/authMiddleware';
 import { NextResponse } from 'next/server';
-import { generateToken } from '../../../../utils/authMiddleware';
 
 export async function POST(request) {
-  const { username, password } = await request.json();
+  const { username, password, rememberMe } = await request.json();
 
-  // Verify credentials (replace with your actual auth logic)
-  if (username === 'validuser' && password === 'validpassword') {
-    const token = generateToken(username);
+  try {
+    const isValid = await validateUser(username, password);
+    if (!isValid) {
+      return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
+    }
+
+    const token = generateToken(username, rememberMe);
     
-    const response = NextResponse.json({ success: true }, { status: 200 });
+    const response = NextResponse.json({ message: 'Logged in successfully' }, { status: 200 });
+    
     response.cookies.set('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== 'development',
       sameSite: 'strict',
-      maxAge: 3600, // 1 hour
-      path: '/',
+      maxAge: rememberMe ? 10 * 24 * 60 * 60 : 30 * 60,
+      path: '/'
     });
 
+    await addLoginActivity(username, 'login'); 
     return response;
+  } catch (error) {
+    return NextResponse.json({ message: 'Error logging in', error: error.message }, { status: 500 });
   }
-
-  return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
 }
