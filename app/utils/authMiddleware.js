@@ -1,5 +1,5 @@
-
 const jwt = require('jsonwebtoken');
+
 
 const SECRET_KEY = 'your-secret-key'; // In a real app, use an environment variable
 
@@ -31,5 +31,7 @@ function authMiddleware(req, res, next) {
   req.user = decoded;
   next();
 }
+
+
 
 module.exports = { generateToken, verifyToken, authMiddleware };

@@ -1,18 +1,23 @@
+// app/components/Navbar.js
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-
-const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Sign-In', path: '/signin' },
-  { name: 'Cart', path: '/cart' },
-];
+import { useAuth } from '../hooks/useAuth';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const navItems = useMemo(() => [
+    { name: 'Home', path: '/' },
+    { name: isLoading ? 'Loading...' : (isAuthenticated ? 'Profile' : 'Sign-In'), 
+      path: isLoading ? '#' : (isAuthenticated ? '/profile' : '/signin') },
+    { name: 'Cart', path: '/cart' },
+  ], [isAuthenticated, isLoading]);
+
 
   return (
     <nav className="bg-gray-800 p-3 relative">
