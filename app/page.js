@@ -1,5 +1,11 @@
+import React from 'react';
+import Item from './components/Item.js';
+
 export default function Home() {
   return (
-    <p>MAIN PAGE OF STORE</p>
+    <div>
+      <p>MAIN PAGE OF STORE</p>
+      <Item/>
+    </div>
   );
 }
