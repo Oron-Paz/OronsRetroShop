@@ -1,37 +1,37 @@
 // app/hooks/useAuth.js
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, createContext, useContext, useCallback } from 'react';
 
-export function useAuth() {
+const AuthContext = createContext();
+
+export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const response = await fetch('/api/auth/check', {
-          method: 'GET',
-          credentials: 'include',
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setIsAuthenticated(data.authenticated);
-          
-        } else {
-          setIsAuthenticated(false);
-        }
-      } catch (error) {
-        console.error('Auth check failed:', error);
+  const checkAuth = useCallback(async () => {
+    try {
+      const response = await fetch('/api/auth/check', {
+        method: 'GET',
+        credentials: 'include',
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setIsAuthenticated(data.authenticated);
+      } else {
         setIsAuthenticated(false);
-      } finally {
-        setIsLoading(false);
       }
-    };
-
-    checkAuth();
+    } catch (error) {
+      console.error('Auth check failed:', error);
+      setIsAuthenticated(false);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
 
   const signout = async () => {
     try {
@@ -49,5 +49,13 @@ export function useAuth() {
     }
   };
 
-  return { isAuthenticated, isLoading, signout };
+  return (
+    <AuthContext.Provider value={{ isAuthenticated, isLoading, signout, checkAuth }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function useAuth() {
+  return useContext(AuthContext);
 }

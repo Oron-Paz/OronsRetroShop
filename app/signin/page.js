@@ -3,13 +3,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-
+import { useAuth } from '../hooks/useAuth';
 
 export default function Page() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const router = useRouter();
+  const { checkAuth } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ export default function Page() {
     });
 
     if (response.ok) {
-      router.refresh(); // This will refresh the current page
+      await checkAuth(); // This will update the auth state
       router.push('/'); // Redirect to store page after successful login
     } else {
       const data = await response.json();
@@ -28,7 +29,6 @@ export default function Page() {
       alert(data.message);
     }
   };
-
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen -mt-10">

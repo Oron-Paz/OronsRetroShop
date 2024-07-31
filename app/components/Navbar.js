@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const navItems = useMemo(() => [
     { name: 'Home', path: '/' },
-    { name: 'Cart', path: '/cart' },
+    { name: 'Cart', path: isAuthenticated ? '/cart' : 'signin' },
     { name: isLoading ? 'Loading...' : (isAuthenticated ? 'Profile' : 'Sign-In'), 
       path: isLoading ? '#' : (isAuthenticated ? '/profile' : '/signin') }
   ], [isAuthenticated, isLoading]);

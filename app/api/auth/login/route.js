@@ -22,7 +22,7 @@ export async function POST(request) {
       maxAge: rememberMe ? 10 * 24 * 60 * 60 : 30 * 60,
       path: '/'
     });
-
+    
     await addLoginActivity(username, 'login'); 
     return response;
   } catch (error) {

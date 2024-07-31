@@ -10,6 +10,6 @@ export async function POST(request) {
     maxAge: 0,
     path: '/',
   });
-
+  
   return response;
 }
