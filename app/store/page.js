@@ -25,7 +25,7 @@ export default function StorePage() {
 
   const handleAddToCart = (itemId) => {
     // Implement add to cart logic here
-    console.log(`Added item ${itemId} to cart`);
+    console.alert(`Added item ${itemId} to cart`);
   };
 
   return (

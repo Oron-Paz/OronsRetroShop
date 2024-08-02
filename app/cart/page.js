@@ -1,6 +1,6 @@
 'use client';
 
-import { useCart } from '../hooks/useCart';
+import { useCart } from '../hooks/useCart.js';
 import { useAuth } from '../hooks/useAuth';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -36,7 +36,8 @@ export default function CartPage() {
           {cart.map((item) => (
             <div key={item.id} className="flex justify-between items-center mb-4 p-4 border rounded">
               <div>
-                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <h2 className="text-xl font-semibold">{item.name}</h2>
+                <p>Description: {item.description}</p>
                 <p>Quantity: {item.quantity}</p>
                 <p>Price: ${item.price}</p>
               </div>

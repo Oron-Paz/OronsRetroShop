@@ -1,11 +1,13 @@
+//app/components/Item.js
+
 'use client';
 
 import Image from 'next/image';
 import { useAuth } from '../hooks/useAuth';
-import { useCart } from '../hooks/useCart';
+import { useCart } from '../hooks/useCart.js';
 import { useRouter } from 'next/navigation';
 
-export default function Item({ id, title, description, imageUrl, price }) {
+export default function Item({ id, name, description, imageUrl, price }) {
   const { isAuthenticated } = useAuth();
   const { addToCart } = useCart();
   const router = useRouter();
@@ -14,14 +16,14 @@ export default function Item({ id, title, description, imageUrl, price }) {
     if (!isAuthenticated) {
       router.push('/signin');
     } else {
-      addToCart({ id, title, price, quantity: 1 });
+      addToCart({ id, name, price, quantity: 1 });
     }
   };
 
   return (
     <div className="border rounded-lg p-4 shadow-md">
-      <Image src={imageUrl} alt={title} width={200} height={200} className="w-full h-48 object-cover mb-4" />
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <Image src={imageUrl} alt={name} width={200} height={200} className="w-full h-48 object-cover mb-4" />
+      <h2 className="text-xl font-bold mb-2">{name}</h2>
       <p className="text-gray-600 mb-4">{description}</p>
       <p className="text-lg font-semibold mb-4">${price}</p>
       <button

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { AuthProvider } from "./hooks/useAuth";
-import { CartProvider } from './hooks/useCart';
+import { CartProvider } from './hooks/useCart.js';
 import { AdminProvider } from './hooks/useAdmin';
 
 

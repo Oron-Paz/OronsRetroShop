@@ -4,8 +4,9 @@
   "cart": [
     {
       "id": 2,
+      "name": "Shirt",
       "price": "42",
-      "quantity": 1
+      "quantity": 3
     }
   ],
   "purchases": [],
@@ -17,6 +18,18 @@
     {
       "datetime": "2024-08-02T17:21:19.566Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T17:32:40.850Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T17:32:48.768Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T17:34:37.969Z",
+      "type": "login"
     }
   ]
 }
