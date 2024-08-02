@@ -1,7 +1,18 @@
 {
   "username": "oron",
   "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-  "cart": [],
+  "cart": [
+    {
+      "id": 2,
+      "price": 49.99,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "price": 79.99,
+      "quantity": 1
+    }
+  ],
   "purchases": [],
   "loginActivity": [
     {
@@ -46,6 +57,14 @@
     },
     {
       "datetime": "2024-08-02T09:39:00.318Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T12:22:13.863Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T12:22:21.907Z",
       "type": "logout"
     }
   ]
