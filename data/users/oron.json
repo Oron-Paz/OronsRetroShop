@@ -1,36 +1,28 @@
 {
   "username": "oron",
   "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-  "cart": [
-    {
-      "id": 1,
-      "name": "Shirt",
-      "description": "Shirt test",
-      "price": "1242",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-02T17:20:10.645Z",
+      "datetime": "2024-08-02T18:35:50.712Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-02T17:21:19.566Z",
+      "datetime": "2024-08-02T18:37:51.297Z",
+      "type": "Removed Unknown Item from cart"
+    },
+    {
+      "datetime": "2024-08-02T18:37:52.287Z",
+      "type": "Removed Unknown Item from cart"
+    },
+    {
+      "datetime": "2024-08-02T18:37:52.744Z",
+      "type": "Removed Unknown Item from cart"
+    },
+    {
+      "datetime": "2024-08-02T18:37:55.282Z",
       "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T17:32:40.850Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T17:32:48.768Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T17:34:37.969Z",
-      "type": "login"
     }
   ]
 }

@@ -5,111 +5,23 @@
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-02T09:39:12.527Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:39:53.539Z",
+      "datetime": "2024-08-02T18:35:31.928Z",
       "type": "logout"
     },
     {
-      "datetime": "2024-08-02T12:22:25.775Z",
+      "datetime": "2024-08-02T18:38:00.090Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-02T12:23:54.575Z",
-      "type": "logout"
+      "datetime": "2024-08-02T18:39:21.711Z",
+      "type": "Added item Retro DVD to cart"
     },
     {
-      "datetime": "2024-08-02T14:17:46.969Z",
-      "type": "login"
+      "datetime": "2024-08-02T18:39:25.782Z",
+      "type": "Removed Retro DVD from cart"
     },
     {
-      "datetime": "2024-08-02T14:17:57.760Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:23:57.941Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:24:35.192Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:25:07.425Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:25:25.922Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:41:44.815Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:46:22.947Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:47:02.437Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:48:59.680Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:50:03.020Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:11:17.159Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:11:45.408Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:36:29.306Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:41:35.410Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:42:00.065Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:42:09.368Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:48:59.126Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:49:20.775Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T17:21:24.452Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T17:21:43.957Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T17:31:59.340Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T17:32:28.976Z",
+      "datetime": "2024-08-02T18:39:40.518Z",
       "type": "logout"
     }
   ]

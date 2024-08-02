@@ -2,6 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
+import { addLoginActivity } from '../../../utils/userManager';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -70,7 +71,11 @@ export async function POST(request) {
       userData.cart.push(item);
     }
 
+
     await saveUserData(decoded.username, userData);
+
+    await addLoginActivity(decoded.username, `Added item ${item.name} to cart`);
+
     return NextResponse.json(userData.cart, { status: 200 });
   } catch (error) {
     console.error('Error adding item to cart:', error);
