@@ -3,7 +3,7 @@ import { verifyToken } from '../../../utils/authMiddleware';
 import fs from 'fs/promises';
 import path from 'path';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = path.join(process.cwd(), 'data/users');
 
 async function getAllUserActivities() {
   const files = await fs.readdir(DATA_DIR);

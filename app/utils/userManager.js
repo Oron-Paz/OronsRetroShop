@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const crypto = require('crypto');
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = path.join(process.cwd(), 'data/users');
 
 // Ensure the data directory exists
 fs.mkdir(DATA_DIR, { recursive: true }).catch(console.error);

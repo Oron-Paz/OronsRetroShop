@@ -1,71 +1,10 @@
 {
   "username": "oron",
-  "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
   "cart": [
     {
       "id": 2,
       "price": 49.99,
       "quantity": 1
-    },
-    {
-      "id": 3,
-      "price": 79.99,
-      "quantity": 1
-    }
-  ],
-  "purchases": [],
-  "loginActivity": [
-    {
-      "datetime": "2024-08-01T11:47:58.787Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:01:42.367Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:18:43.080Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:28:20.470Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:29:01.122Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:29:45.495Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:29:51.982Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:29:57.414Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:30:09.903Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:38:23.422Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:39:00.318Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T12:22:13.863Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T12:22:21.907Z",
-      "type": "logout"
     }
   ]
 }
