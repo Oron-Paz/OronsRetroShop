@@ -7,6 +7,46 @@
     {
       "datetime": "2024-08-01T11:47:58.787Z",
       "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:01:42.367Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:18:43.080Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:28:20.470Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:29:01.122Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T09:29:45.495Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:29:51.982Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T09:29:57.414Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:30:09.903Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-02T09:38:23.422Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:39:00.318Z",
+      "type": "logout"
     }
   ]
 }

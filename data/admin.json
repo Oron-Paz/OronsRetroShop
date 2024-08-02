@@ -1,0 +1,16 @@
+{
+  "username": "admin",
+  "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+  "cart": [],
+  "purchases": [],
+  "loginActivity": [
+    {
+      "datetime": "2024-08-02T09:39:12.527Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-02T09:39:53.539Z",
+      "type": "logout"
+    }
+  ]
+}
