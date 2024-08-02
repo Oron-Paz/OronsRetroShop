@@ -23,10 +23,6 @@ export default function StorePage() {
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleAddToCart = (itemId) => {
-    // Implement add to cart logic here
-    console.alert(`Added item ${itemId} to cart`);
-  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -43,7 +39,6 @@ export default function StorePage() {
           <Item
             key={item.id}
             {...item}
-            onAddToCart={handleAddToCart}
           />
         ))}
       </div>

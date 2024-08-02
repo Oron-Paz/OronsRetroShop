@@ -16,7 +16,7 @@ export default function Item({ id, name, description, imageUrl, price }) {
     if (!isAuthenticated) {
       router.push('/signin');
     } else {
-      addToCart({ id, name, price, quantity: 1 });
+      addToCart({ id, name, description ,price, quantity: 1 });
     }
   };
 
