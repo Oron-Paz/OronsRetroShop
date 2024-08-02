@@ -50,3 +50,4 @@ export async function DELETE(request, { params }) {
     return NextResponse.json({ error: 'Error removing item from cart' }, { status: 500 });
   }
 }
+

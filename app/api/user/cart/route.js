@@ -5,6 +5,7 @@ import { verifyToken } from '../../../utils/authMiddleware';
 import fs from 'fs/promises';
 import path from 'path';
 
+
 const DATA_DIR = path.join(process.cwd(), 'data');
 
 async function getUserData(username) {
@@ -76,3 +77,4 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Error adding item to cart' }, { status: 500 });
   }
 }
+

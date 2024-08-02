@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { AuthProvider } from "./hooks/useAuth";
 import { CartProvider } from './hooks/useCart';
+import { AdminProvider } from './hooks/useAdmin';
+
 
 
 
@@ -18,12 +20,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <AuthProvider>
-          <CartProvider>
-          <header>
-            <Navbar />
-          </header>
-          <body className={inter.className}>{children}</body>
-          </CartProvider>
+          <AdminProvider>
+            <CartProvider>
+              <header>
+                <Navbar />
+              </header>
+              <body className={inter.className}>{children}</body>
+            </CartProvider>
+          </AdminProvider>
         </AuthProvider>
       </body>
     </html>

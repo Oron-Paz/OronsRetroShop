@@ -4,23 +4,30 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useRouter } from 'next/navigation';
+import ItemForm from '../components/ItemForm';
+import { useAdmin } from '../hooks/useAdmin';
 
 export default function AdminPage() {
   const [items, setItems] = useState([]);
   const [activities, setActivities] = useState([]);
   const [filter, setFilter] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const { isAuthenticated, isLoading } = useAuth();
+  
+  const [isAddingItem, setIsAddingItem] = useState(false);
+  const [editingItem, setEditingItem] = useState(null);
   const router = useRouter();
 
+  const { isAdmin, isLoading } = useAdmin();
+
   useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      router.push('/signin');
-    } else if (isAuthenticated) {
+    if (!isLoading && !isAdmin) {
+      alert('You are not authorized to view this page. \nRedirecting to home page.');
+      router.push('/'); 
+    } else if (isAdmin) {
       fetchActivities();
       fetchItems();
     }
-  }, [isAuthenticated, isLoading, router]);
+  }, [isAdmin, isLoading, router]);
 
   const fetchActivities = async () => {
     try {
@@ -62,6 +69,7 @@ export default function AdminPage() {
       if (response.ok) {
         const addedItem = await response.json();
         setItems([...items, addedItem]);
+        setIsAddingItem(false);
       }
     } catch (error) {
       console.error('Error adding item:', error);
@@ -78,6 +86,7 @@ export default function AdminPage() {
       if (response.ok) {
         const updated = await response.json();
         setItems(items.map(item => item.id === updated.id ? updated : item));
+        setEditingItem(null);
       }
     } catch (error) {
       console.error('Error updating item:', error);
@@ -108,7 +117,7 @@ export default function AdminPage() {
     return <div>Loading...</div>;
   }
 
-  if (!isAuthenticated) {
+  if (!isAdmin) {
     return null;
   }
 
@@ -130,8 +139,8 @@ export default function AdminPage() {
             <h3 className="text-xl font-bold">{item.name}</h3>
             <p>{item.description}</p>
             <p>Price: ${item.price}</p>
-            <button onClick={() => handleUpdateItem({...item, price: item.price + 1})} className="bg-blue-500 text-white px-2 py-1 rounded mr-2">
-              Update Price
+            <button onClick={() => setEditingItem(item)} className="bg-blue-500 text-white px-2 py-1 rounded mr-2">
+              Edit
             </button>
             <button onClick={() => handleDeleteItem(item.id)} className="bg-red-500 text-white px-2 py-1 rounded">
               Delete
@@ -139,9 +148,32 @@ export default function AdminPage() {
           </div>
         ))}
       </div>
-      <button onClick={() => handleAddItem({name: 'New Item', description: 'Description', price: 0.99, image: '/images/default.jpg'})} className="mt-4 bg-green-500 text-white px-4 py-2 rounded">
-        Add New Item
-      </button>
+      {!isAddingItem && (
+        <button onClick={() => setIsAddingItem(true)} className="mt-4 bg-green-500 text-white px-4 py-2 rounded">
+          Add New Item
+        </button>
+      )}
+      {isAddingItem && (
+        <div className="mt-4">
+          <h3 className="text-xl font-bold mb-2">Add New Item</h3>
+          <ItemForm 
+            onSubmit={handleAddItem} 
+            onCancel={() => setIsAddingItem(false)}
+          />
+        </div>
+      )}
+      {editingItem && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md">
+            <h3 className="text-xl font-bold mb-2">Edit Item</h3>
+            <ItemForm 
+              item={editingItem} 
+              onSubmit={handleUpdateItem} 
+              onCancel={() => setEditingItem(null)}
+            />
+          </div>
+        </div>
+      )}
 
       <h2 className="text-2xl font-bold mt-8 mb-4">User Activities</h2>
       <div className="mb-4">

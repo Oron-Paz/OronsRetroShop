@@ -1,4 +1,10 @@
 {
   "username": "oron",
-  "cart": []
+  "cart": [
+    {
+      "id": 2,
+      "price": "42",
+      "quantity": 1
+    }
+  ]
 }

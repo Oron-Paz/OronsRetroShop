@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const StoreManager = () => {
   const [items, setItems] = useState([]);
@@ -12,8 +11,10 @@ const StoreManager = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('/api/items');
-      setItems(response.data);
+      const response = await fetch('/api/items');
+      if (!response.ok) throw new Error('Failed to fetch items');
+      const data = await response.json();
+      setItems(data);
     } catch (error) {
       console.error('Error fetching items:', error);
     }
@@ -31,7 +32,12 @@ const StoreManager = () => {
   const handleAddItem = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/items', newItem);
+      const response = await fetch('/api/items', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newItem),
+      });
+      if (!response.ok) throw new Error('Failed to add item');
       setNewItem({ name: '', price: '', description: '', image: '' });
       fetchItems();
     } catch (error) {
@@ -46,7 +52,12 @@ const StoreManager = () => {
   const handleUpdateItem = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/items/${editingItem._id}`, editingItem);
+      const response = await fetch(`/api/items?id=${editingItem.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editingItem),
+      });
+      if (!response.ok) throw new Error('Failed to update item');
       setEditingItem(null);
       fetchItems();
     } catch (error) {
@@ -56,12 +67,14 @@ const StoreManager = () => {
 
   const handleDeleteItem = async (itemId) => {
     try {
-      await axios.delete(`/api/items/${itemId}`);
+      const response = await fetch(`/api/items?id=${itemId}`, { method: 'DELETE' });
+      if (!response.ok) throw new Error('Failed to delete item');
       fetchItems();
     } catch (error) {
       console.error('Error deleting item:', error);
     }
   };
+
 
   return (
     <div className="container mx-auto p-4">
