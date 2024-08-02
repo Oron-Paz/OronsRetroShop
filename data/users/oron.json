@@ -4,115 +4,18 @@
   "cart": [
     {
       "id": 2,
-      "price": 49.99,
-      "quantity": 1
-    },
-    {
-      "id": 3,
-      "price": 79.99,
+      "price": "42",
       "quantity": 1
     }
   ],
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-01T11:47:58.787Z",
+      "datetime": "2024-08-02T17:20:10.645Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-02T09:01:42.367Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:18:43.080Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:28:20.470Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:29:01.122Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:29:45.495Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:29:51.982Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:29:57.414Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:30:09.903Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T09:38:23.422Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T09:39:00.318Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T12:22:13.863Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T12:22:21.907Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:17:18.356Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:17:38.987Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:24:40.799Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:24:46.973Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T14:24:52.175Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T14:25:03.576Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:11:01.635Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:11:13.256Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:34:30.353Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:36:24.426Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T15:41:38.418Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-02T15:41:45.150Z",
+      "datetime": "2024-08-02T17:21:19.566Z",
       "type": "logout"
     }
   ]
