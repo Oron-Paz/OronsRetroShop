@@ -82,3 +82,46 @@ export async function DELETE(request, { params }) {
     return NextResponse.json({ error: 'Error removing item from cart' }, { status: 500 });
   }
 }
+
+export async function PUT(request, { params }) {
+  const token = request.cookies.get('token');
+  
+  if (!token) {
+    return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+  }
+
+  const decoded = verifyToken(token.value);
+  if (!decoded) {
+    return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
+  }
+
+  try {
+    const { itemId } = params;
+    const { quantity } = await request.json();
+    const userData = await getUserData(decoded.username);
+    
+    // Find the item in the cart
+    const itemIndex = userData.cart.findIndex(item => item.id === parseInt(itemId));
+
+    if (itemIndex === -1) {
+      return NextResponse.json({ error: 'Item not found in cart' }, { status: 404 });
+    }
+
+    // Update the quantity
+    userData.cart[itemIndex].quantity = quantity;
+
+    // Fetch the item details
+    const itemDetails = await getItemDetails(itemId);
+
+    await saveUserData(decoded.username, userData);
+
+    const name = itemDetails ? itemDetails.name : 'Unknown Item (possibly removed)';
+
+    await addLoginActivity(decoded.username, `Updated quantity of ${name} in cart to ${quantity}`);
+
+    return NextResponse.json(userData.cart, { status: 200 });
+  } catch (error) {
+    console.error('Error updating item quantity in cart:', error);
+    return NextResponse.json({ error: 'Error updating item quantity in cart' }, { status: 500 });
+  }
+}

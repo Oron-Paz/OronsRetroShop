@@ -1,22 +1,7 @@
 {
   "username": "oron",
   "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-  "cart": [
-    {
-      "id": 3,
-      "name": "Retro super cup",
-      "description": "supa cup",
-      "price": "998.98",
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "name": "Retro DVD",
-      "description": "DVD",
-      "price": "120",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "purchases": [],
   "loginActivity": [
     {
@@ -117,6 +102,130 @@
     },
     {
       "datetime": "2024-08-03T06:19:11.211Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:32:08.619Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:32:12.878Z",
+      "type": "Added item Retro super cup to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:32:29.004Z",
+      "type": "Removed Retro DVD from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:32:30.346Z",
+      "type": "Removed Retro super cup from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:32:34.692Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:32:59.397Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:33:01.741Z",
+      "type": "Added item Retro Glasses to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:33:02.620Z",
+      "type": "Added item Retro DVD to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:33:08.209Z",
+      "type": "Added item Retro Glasses to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:33:25.413Z",
+      "type": "Removed Retro Glasses from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:00.329Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:00.598Z",
+      "type": "Updated quantity of Retro DVD in cart to 3"
+    },
+    {
+      "datetime": "2024-08-03T06:40:01.217Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:01.397Z",
+      "type": "Updated quantity of Retro DVD in cart to 1"
+    },
+    {
+      "datetime": "2024-08-03T06:40:01.983Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:02.148Z",
+      "type": "Updated quantity of Retro DVD in cart to 3"
+    },
+    {
+      "datetime": "2024-08-03T06:40:02.324Z",
+      "type": "Updated quantity of Retro DVD in cart to 4"
+    },
+    {
+      "datetime": "2024-08-03T06:40:02.715Z",
+      "type": "Updated quantity of Retro DVD in cart to 3"
+    },
+    {
+      "datetime": "2024-08-03T06:40:02.872Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:03.058Z",
+      "type": "Updated quantity of Retro DVD in cart to 1"
+    },
+    {
+      "datetime": "2024-08-03T06:40:03.649Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:03.802Z",
+      "type": "Updated quantity of Retro DVD in cart to 3"
+    },
+    {
+      "datetime": "2024-08-03T06:40:04.007Z",
+      "type": "Updated quantity of Retro DVD in cart to 4"
+    },
+    {
+      "datetime": "2024-08-03T06:40:10.100Z",
+      "type": "Updated quantity of Retro DVD in cart to 5"
+    },
+    {
+      "datetime": "2024-08-03T06:40:12.741Z",
+      "type": "Removed Retro DVD from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:14.580Z",
+      "type": "Added item Retro DVD to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:15.227Z",
+      "type": "Added item Retro super cup to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:18.949Z",
+      "type": "Updated quantity of Retro super cup in cart to 2"
+    },
+    {
+      "datetime": "2024-08-03T06:40:21.503Z",
+      "type": "Removed Retro super cup from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:22.283Z",
+      "type": "Removed Retro DVD from cart"
+    },
+    {
+      "datetime": "2024-08-03T06:40:25.222Z",
       "type": "logout"
     }
   ]
