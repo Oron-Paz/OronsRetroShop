@@ -14,5 +14,12 @@ export async function GET(request) {
     return NextResponse.json({ isAdmin: false }, { status: 401 });
   }
 
-  return NextResponse.json({ isAdmin: true }, { status: 200 });
+  return NextResponse.json({ isAdmin: true }, { 
+    status: 200,
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+    }
+  });
 }

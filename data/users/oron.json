@@ -1,7 +1,22 @@
 {
   "username": "oron",
   "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-  "cart": [],
+  "cart": [
+    {
+      "id": 3,
+      "name": "Retro super cup",
+      "description": "supa cup",
+      "price": "998.98",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Retro DVD",
+      "description": "DVD",
+      "price": "120",
+      "quantity": 1
+    }
+  ],
   "purchases": [],
   "loginActivity": [
     {
@@ -22,6 +37,86 @@
     },
     {
       "datetime": "2024-08-02T18:37:55.282Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T05:56:36.591Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T05:58:10.761Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T05:58:14.191Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T05:59:54.518Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:02:06.747Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:02:11.078Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:02:49.264Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:02:57.762Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:04:40.194Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:04:51.758Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:05:41.601Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:05:53.140Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:05:56.170Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:06:00.257Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:15:26.016Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:15:29.718Z",
+      "type": "Added item Retro super cup to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:15:30.397Z",
+      "type": "Added item Retro DVD to cart"
+    },
+    {
+      "datetime": "2024-08-03T06:15:37.166Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-03T06:19:02.993Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-03T06:19:11.211Z",
       "type": "logout"
     }
   ]

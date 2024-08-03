@@ -2,22 +2,45 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '../hooks/useAuth';
+import { useAdmin } from '../hooks/useAdmin';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const { isAuthenticated, isLoading, signout } = useAuth();
+  const { isAuthenticated, isLoading: isAuthLoading, signout } = useAuth();
+  const { isAdmin, isLoading: isAdminLoading, checkAdmin } = useAdmin();
 
-  const navItems = useMemo(() => [
-    { name: 'Home', path: '/' },
-    { name: 'Store', path: '/store' },
-    { name: 'Cart', path: isAuthenticated ? '/cart' : 'signin' },
-    { name: isLoading ? 'Loading...' : (isAuthenticated ? 'Profile' : 'Sign-In'), 
-      path: isLoading ? '#' : (isAuthenticated ? '/profile' : '/signin') }
-  ], [isAuthenticated, isLoading]);
+  useEffect(() => {
+    if (isAuthenticated && !isAuthLoading) {
+      checkAdmin();
+    }
+  }, [isAuthenticated, isAuthLoading, checkAdmin]);
+
+  const navItems = useMemo(() => {
+    const items = [
+      { name: 'Home', path: '/' },
+      { name: 'Store', path: '/store' },
+    ];
+
+    if (isAuthenticated && !isAuthLoading) {
+      items.push({ name: 'Cart', path: '/cart' });
+      items.push({ name: 'Profile', path: '/profile' });
+      if (isAdmin && !isAdminLoading) {
+        items.push({ name: 'Admin Dashboard', path: '/admin' });
+      }
+    } else if (!isAuthLoading) {
+      items.push({ name: 'Sign-In', path: '/signin' });
+    }
+
+    return items;
+  }, [isAuthenticated, isAuthLoading, isAdmin, isAdminLoading]);
+
+  if (isAuthLoading || isAdminLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <nav className="bg-gray-800 p-3 relative">
