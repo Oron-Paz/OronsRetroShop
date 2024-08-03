@@ -34,9 +34,7 @@ export default function CartPage() {
   };
 
   const handlePayment = () => {
-    // Implement payment logic here
-    console.log('Processing payment...');
-    // You might want to redirect to a payment page or open a payment modal
+    router.push('/payment');
   };
 
   return (

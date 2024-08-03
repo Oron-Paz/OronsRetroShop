@@ -5,79 +5,11 @@
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-02T18:35:31.928Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-02T18:38:00.090Z",
+      "datetime": "2024-08-03T06:59:28.895Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-02T18:39:21.711Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-02T18:39:25.782Z",
-      "type": "Removed Retro DVD from cart"
-    },
-    {
-      "datetime": "2024-08-02T18:39:40.518Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T05:59:58.425Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:00:26.785Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:01:45.343Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:02:03.305Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:03:03.946Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:03:11.343Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:06:04.660Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:06:09.135Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:15:41.178Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:15:56.091Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:19:15.423Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:19:31.664Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T06:32:39.385Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T06:32:53.377Z",
+      "datetime": "2024-08-03T06:59:43.012Z",
       "type": "logout"
     }
   ]

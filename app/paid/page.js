@@ -4,7 +4,7 @@ function Page() {
     return (
         <div>
             <h1>Welcome to Oron's Retro Shop!</h1>
-            <p>ETHANKS FOR PAYING   ms.</p>
+            <p>THANKS FOR giving me your money ! </p>
         </div>
     );
 }
