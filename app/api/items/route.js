@@ -48,10 +48,18 @@ export async function PUT(request) {
   try {
     const updatedItem = await request.json();
     const items = await getItems();
-    const index = items.findIndex(item => item.id === updatedItem.id);
-    if (index !== -1) {
-      const fileName = `${updatedItem.id}-${updatedItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
-      await fs.writeFile(path.join(itemsDirectory, fileName), JSON.stringify(updatedItem, null, 2));
+    const existingItem = items.find(item => item.id === updatedItem.id);
+    if (existingItem) {
+      const oldFileName = `${existingItem.id}-${existingItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
+      const newFileName = `${updatedItem.id}-${updatedItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
+      
+      // Delete old file if name has changed
+      if (oldFileName !== newFileName) {
+        await fs.unlink(path.join(itemsDirectory, oldFileName));
+      }
+      
+      // Write new file
+      await fs.writeFile(path.join(itemsDirectory, newFileName), JSON.stringify(updatedItem, null, 2));
       return NextResponse.json(updatedItem);
     }
     return NextResponse.json({ error: 'Item not found' }, { status: 404 });

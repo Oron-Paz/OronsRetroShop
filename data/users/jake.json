@@ -1,0 +1,51 @@
+{
+  "username": "jake",
+  "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+  "cart": [
+    {
+      "id": 2,
+      "name": "Retro DVD",
+      "description": "DVD",
+      "price": "120",
+      "quantity": 4
+    },
+    {
+      "id": 3,
+      "name": "Retro super cup",
+      "description": "supa cup",
+      "price": "998.98",
+      "quantity": 1
+    }
+  ],
+  "purchases": [],
+  "loginActivity": [
+    {
+      "datetime": "2024-08-04T14:02:34.212Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-04T14:02:46.272Z",
+      "type": "Added item Retro DVD to cart"
+    },
+    {
+      "datetime": "2024-08-04T14:02:47.042Z",
+      "type": "Added item Retro super cup to cart"
+    },
+    {
+      "datetime": "2024-08-04T14:02:56.186Z",
+      "type": "Updated quantity of Retro DVD in cart to 2"
+    },
+    {
+      "datetime": "2024-08-04T14:02:57.015Z",
+      "type": "Updated quantity of Retro DVD in cart to 3"
+    },
+    {
+      "datetime": "2024-08-04T14:02:57.323Z",
+      "type": "Updated quantity of Retro DVD in cart to 4"
+    },
+    {
+      "datetime": "2024-08-04T14:03:19.572Z",
+      "type": "logout"
+    }
+  ]
+}
