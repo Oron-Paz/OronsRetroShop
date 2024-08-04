@@ -72,7 +72,7 @@ export async function DELETE(request, { params }) {
 
     await saveUserData(decoded.username, userData);
 
-    const name  = itemDetails ? itemDetails.name : 'Unknown Item (possibly removed)';
+    const name  = itemDetails ? itemDetails.name : 'Unknown Item (possibly removed from store)';
 
     await addLoginActivity(decoded.username, `Removed ${name} from cart`);
 
