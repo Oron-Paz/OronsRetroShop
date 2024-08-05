@@ -13,15 +13,16 @@ function hashPassword(password) {
 
 async function createUser(username, password) {
 
-  console.log(DATA_DIR);
+  //console.log(DATA_DIR);
   const userFile = path.join(DATA_DIR, `${username}.json`);
-  console.log(userFile);
+  //console.log(userFile);
 
   const hashedPassword = hashPassword(password);
   
   const userData = {
     username,
     password: hashedPassword,
+    avatarURL: null,
     cart: [],
     purchases: [],
     loginActivity: []

@@ -1,23 +1,28 @@
 {
   "username": "admin",
   "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
-  "cart": [],
+  "avatarURL": "https://imgs.search.brave.com/mDztPWayQWWrIPAy2Hm_FNfDjDVgayj73RTnUIZ15L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE1Lzg0LzQz/LzM2MF9GXzIxNTg0/NDMyNV90dFg5WWlJ/SXllYVI3TmU2RWFM/TGpNQW15NEd2UEM2/OS5qcGc",
+  "cart": [
+    {
+      "id": 1,
+      "name": "Retro shirt",
+      "description": "retro shirt changed",
+      "price": "999",
+      "quantity": 1
+    }
+  ],
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-05T08:17:24.940Z",
+      "datetime": "2024-08-05T17:47:37.197Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-05T08:17:33.411Z",
-      "type": "logout"
+      "datetime": "2024-08-05T17:51:20.377Z",
+      "type": "Added item Retro shirt to cart"
     },
     {
-      "datetime": "2024-08-05T15:07:00.644Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-05T15:12:41.144Z",
+      "datetime": "2024-08-05T17:51:35.670Z",
       "type": "logout"
     }
   ]

@@ -20,18 +20,9 @@ export async function GET(request) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    const userData = {
-      username: user.username,
-      email: user.email,
-      avatarURL: user.avatarURL,
-      lastLogin: user.loginActivity[user.loginActivity.length - 1]?.datetime,
-      createdAt: user.createdAt, // You might need to add this field when creating a user
-      accountStatus: 'Active', // You might want to add an actual status field to your user data
-    };
-
-    return NextResponse.json(userData, { status: 200 });
+    return NextResponse.json(user.purchases, { status: 200 });
   } catch (error) {
-    console.error('Error fetching user data:', error);
-    return NextResponse.json({ error: 'Error fetching user data' }, { status: 500 });
+    console.error('Error fetching user purchases:', error);
+    return NextResponse.json({ error: 'Error fetching user purchases' }, { status: 500 });
   }
 }
