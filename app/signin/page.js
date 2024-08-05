@@ -58,20 +58,20 @@ export default function Page() {
             checked={rememberMe}
             onChange={(e) => setRememberMe(e.target.checked)}
           />
-          Remember me
+          ‎ Remember me
         </label>
 
         <button
           type="button"
           onClick={handleSubmit}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-yellow-500 text-stone-800 px-4 py-2 rounded"
         >
           Sign In
         </button>
       </form>
 
       <div className="mt-4">
-        <p>Don't have an account? <Link href="/signup" className="text-blue-500">Sign up</Link></p>
+        <p>Don't have an account? <Link href="/signup" className="text-yellow-600">Sign up</Link></p>
       </div>
     </div>
   );

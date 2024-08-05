@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useCart } from '../hooks/useCart';
 
 const PaymentPage = () => {
     const [cardNumber, setCardNumber] = useState('');
     const [expiryDate, setExpiryDate] = useState('');
     const [cvv, setCvv] = useState('');
+    const { cart, removeFromCart, updateQuantity } = useCart();
     const router = useRouter();
 
     const handleCardNumberChange = (e) => {

@@ -11,6 +11,14 @@
     {
       "datetime": "2024-08-05T08:17:33.411Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-05T15:07:00.644Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-05T15:12:41.144Z",
+      "type": "logout"
     }
   ]
 }

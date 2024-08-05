@@ -34,6 +34,7 @@ export default function CartPage() {
   };
 
   const handlePayment = () => {
+    
     router.push('/payment');
   };
 
@@ -54,7 +55,7 @@ export default function CartPage() {
                   objectFit="cover"
                 />
               </div>
-              <div className="flex-grow">
+              <div className="flex-grow font-mono">
                 <h2 className="text-xl font-semibold">{item.name}</h2>
                 <p>Description: {item.description}</p>
                 <p>Price: ${item.price}</p>
@@ -74,22 +75,22 @@ export default function CartPage() {
                   </button>
                 </div>
               </div>
-              <div className="flex flex-col items-end">
+              <div className="flex flex-col items-end font-mono">
                 <p className="font-bold mb-2">Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
+                  className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800 transition-colors"
                 >
                   Remove
                 </button>
               </div>
             </div>
           ))}
-          <div className="mt-8 flex justify-between items-center">
+          <div className="mt-8 flex justify-between items-center font-mono">
             <h2 className="text-2xl font-bold">Total: ${total.toFixed(2)}</h2>
             <button
               onClick={handlePayment}
-              className="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition-colors text-lg"
+              className="bg-yellow-500 text-stone-800 px-6 py-3 rounded hover:bg-yellow-600 transition-colors text-lg"
             >
               Proceed to Payment
             </button>
