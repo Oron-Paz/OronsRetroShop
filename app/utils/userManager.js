@@ -26,7 +26,8 @@ async function createUser(username, password) {
     avatarURL: avatar,
     cart: [],
     purchases: [],
-    loginActivity: []
+    loginActivity: [],
+    createdAt: new Date().toISOString() 
   };
 
   await fs.writeFile(userFile, JSON.stringify(userData, null, 2));
