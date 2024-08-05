@@ -1,7 +1,7 @@
 {
   "username": "admin",
   "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
-  "avatarURL": "https://imgs.search.brave.com/mDztPWayQWWrIPAy2Hm_FNfDjDVgayj73RTnUIZ15L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE1Lzg0LzQz/LzM2MF9GXzIxNTg0/NDMyNV90dFg5WWlJ/SXllYVI3TmU2RWFM/TGpNQW15NEd2UEM2/OS5qcGc",
+  "avatarURL": "/avatar/admin_1722881952179.jpg",
   "cart": [
     {
       "id": 1,
@@ -39,6 +39,14 @@
     },
     {
       "datetime": "2024-08-05T17:57:59.131Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-05T18:18:13.504Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-05T18:19:26.670Z",
       "type": "logout"
     }
   ]

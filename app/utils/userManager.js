@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const crypto = require('crypto');
-import avatar from '../public/avatar/defaultAvatar.png';
+import avatar from '../../public/avatar/defaultAvatar.png';
 
 const DATA_DIR = path.join(process.cwd(), 'data/users');
 
@@ -34,11 +34,11 @@ async function createUser(username, password) {
 
 async function getUser(username) {
   const userFile = path.join(DATA_DIR, `${username}.json`);
-  console.log(userFile);
+  //console.log(userFile);
   try {
-    console.log('reading file');
+    //console.log('reading file');
     const data = await fs.readFile(userFile, 'utf8');
-    console.log(data);
+    //console.log(data);
     return JSON.parse(data);
   } catch (error) {
     if (error.code === 'ENOENT') {

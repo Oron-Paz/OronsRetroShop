@@ -10,6 +10,7 @@ export default function ProfilePage() {
   const [userData, setUserData] = useState(null);
   const [pastPurchases, setPastPurchases] = useState([]);
   const [newAvatarURL, setNewAvatarURL] = useState('');
+  const [avatarFile, setAvatarFile] = useState(null);
   const { isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
 
@@ -56,18 +57,27 @@ export default function ProfilePage() {
 
   const handleAvatarChange = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    if (avatarFile) {
+      formData.append('avatar', avatarFile);
+    } else if (newAvatarURL) {
+      formData.append('avatarURL', newAvatarURL);
+    } else {
+      console.error('No avatar file or URL provided');
+      return;
+    }
+
     try {
       const response = await fetch('/api/user/update-avatar', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ avatarURL: newAvatarURL }),
+        body: formData,
         credentials: 'include',
       });
       if (response.ok) {
-        setUserData({ ...userData, avatarURL: newAvatarURL });
+        const data = await response.json();
+        setUserData({ ...userData, avatarURL: data.avatarURL });
         setNewAvatarURL('');
+        setAvatarFile(null);
       } else {
         console.error('Failed to update avatar');
       }
@@ -107,20 +117,28 @@ export default function ProfilePage() {
         </div>
 
         <form onSubmit={handleAvatarChange} className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Change Profile Picture</h3>
-          <div className="flex">
+        <h3 className="text-xl font-semibold mb-2">Change Profile Picture</h3>
+        <div className="flex flex-col space-y-2">
+          <input
+            type="text"
+            value={newAvatarURL}
+            onChange={(e) => setNewAvatarURL(e.target.value)}
+            placeholder="Enter new avatar URL"
+            className="border rounded px-3 py-2"
+          />
+          <div className="flex items-center">
             <input
-              type="text"
-              value={newAvatarURL}
-              onChange={(e) => setNewAvatarURL(e.target.value)}
-              placeholder="Enter new avatar URL"
-              className="flex-grow border rounded-l px-3 py-2"
+              type="file"
+              onChange={(e) => setAvatarFile(e.target.files[0])}
+              accept="image/*"
+              className="border rounded px-3 py-2"
             />
-            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-r">
-              Update
-            </button>
           </div>
-        </form>
+          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+            Update Avatar
+          </button>
+        </div>
+      </form>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
