@@ -2,89 +2,10 @@
   "username": "oron",
   "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
   "cart": [
-    {
-      "id": 3,
-      "name": "Retro super cup",
-      "description": "supa cup",
-      "price": "998.98",
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "name": "Retro DVD",
-      "description": "DVD",
-      "price": "120",
-      "quantity": 4
-    },
-    {
-      "id": 1,
-      "name": "Retro Glasses",
-      "description": "Retro Glasses",
-      "price": "100",
-      "quantity": 2
-    }
+   
   ],
   "purchases": [],
   "loginActivity": [
-    {
-      "datetime": "2024-08-03T07:40:24.961Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T07:40:29.573Z",
-      "type": "Added item Retro super cup to cart"
-    },
-    {
-      "datetime": "2024-08-03T07:40:30.473Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-03T07:43:28.759Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-03T08:19:38.182Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-03T08:20:03.679Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T13:08:27.892Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T13:08:30.953Z",
-      "type": "Updated quantity of Retro DVD in cart to 2"
-    },
-    {
-      "datetime": "2024-08-04T13:08:31.595Z",
-      "type": "Added item Retro Glasses to cart"
-    },
-    {
-      "datetime": "2024-08-04T13:08:56.973Z",
-      "type": "Updated quantity of Retro DVD in cart to 3"
-    },
-    {
-      "datetime": "2024-08-04T13:08:57.337Z",
-      "type": "Updated quantity of Retro DVD in cart to 4"
-    },
-    {
-      "datetime": "2024-08-04T13:09:29.556Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T14:35:26.889Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T14:35:29.850Z",
-      "type": "Updated quantity of Retro shirt in cart to 2"
-    },
-    {
-      "datetime": "2024-08-04T14:35:31.082Z",
-      "type": "logout"
-    }
+    
   ]
 }

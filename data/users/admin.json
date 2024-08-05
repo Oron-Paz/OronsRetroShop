@@ -5,59 +5,11 @@
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-03T06:59:28.895Z",
+      "datetime": "2024-08-05T08:17:24.940Z",
       "type": "login"
     },
     {
-      "datetime": "2024-08-03T06:59:43.012Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T13:09:33.833Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T13:10:25.689Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T13:53:18.244Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T13:53:33.831Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T14:03:23.382Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T14:07:19.290Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T14:07:27.737Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T14:35:18.454Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T14:35:34.881Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T14:57:54.100Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-04T14:58:13.279Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-04T14:59:44.691Z",
+      "datetime": "2024-08-05T08:17:33.411Z",
       "type": "logout"
     }
   ]

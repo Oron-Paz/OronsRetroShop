@@ -43,7 +43,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-gray-800 p-3 relative">
+    <nav className="bg-stone-800 p-3 relative">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white font-bold text-xl">
           OronsRetroShop
@@ -97,7 +97,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="sm:hidden absolute bg-gray-800 w-screen left-0 top-13 px-4">
+        <div className="sm:hidden absolute bg-stone-800 w-screen left-0 top-13 px-4">
           {navItems.map((item) => (
             <Link
               key={item.path}
