@@ -24,6 +24,22 @@
     {
       "datetime": "2024-08-05T17:51:35.670Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-05T17:53:09.129Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-05T17:57:24.319Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-05T17:57:51.663Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-05T17:57:59.131Z",
+      "type": "logout"
     }
   ]
 }

@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const crypto = require('crypto');
+import avatar from '../public/avatar/defaultAvatar.png';
 
 const DATA_DIR = path.join(process.cwd(), 'data/users');
 
@@ -22,7 +23,7 @@ async function createUser(username, password) {
   const userData = {
     username,
     password: hashedPassword,
-    avatarURL: null,
+    avatarURL: avatar,
     cart: [],
     purchases: [],
     loginActivity: []
