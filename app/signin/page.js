@@ -33,7 +33,8 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen -mt-10">
       <h2 className="text-2xl font-bold mb-4">Sign In</h2>
-      <form className="flex flex-col gap-4">
+      <p className="text-md mb-5 text-stone-600 font-mono">Sign-in to access all features of our amazing store!</p>
+      <form className="flex flex-col gap-4 font-mono">
         <label htmlFor="user">Username:</label>
         <input
           type="user"
@@ -70,7 +71,7 @@ export default function Page() {
         </button>
       </form>
 
-      <div className="mt-4">
+      <div className="mt-4 font-mono">
         <p>Don't have an account? <Link href="/signup" className="text-yellow-600">Sign up</Link></p>
       </div>
     </div>
