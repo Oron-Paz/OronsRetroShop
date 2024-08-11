@@ -36,6 +36,12 @@ export async function POST(request) {
     const newItem = await request.json();
     const items = await getItems();
     newItem.id = items.length > 0 ? Math.max(...items.map(item => item.id)) + 1 : 1;
+    
+    // Validate image URL
+    if (!newItem.image.startsWith('http') && !newItem.image.match(/\.(jpeg|jpg|gif|png)$/)) {
+      return NextResponse.json({ error: 'Invalid image source' }, { status: 400 });
+    }
+
     const fileName = `${newItem.id}-${newItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
     await fs.writeFile(path.join(itemsDirectory, fileName), JSON.stringify(newItem, null, 2));
     return NextResponse.json(newItem, { status: 201 });
@@ -50,6 +56,11 @@ export async function PUT(request) {
     const items = await getItems();
     const existingItem = items.find(item => item.id === updatedItem.id);
     if (existingItem) {
+      // Validate image URL
+      if (!updatedItem.image.startsWith('http') && !updatedItem.image.match(/\.(jpeg|jpg|gif|png)$/)) {
+        return NextResponse.json({ error: 'Invalid image source' }, { status: 400 });
+      }
+
       const oldFileName = `${existingItem.id}-${existingItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
       const newFileName = `${updatedItem.id}-${updatedItem.name.toLowerCase().replace(/\s+/g, '-')}.json`;
       

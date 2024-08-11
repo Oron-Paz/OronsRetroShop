@@ -1,4 +1,7 @@
+//app/admin/manageProducts.js
+
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const StoreManager = () => {
   const [items, setItems] = useState([]);
@@ -168,7 +171,7 @@ const StoreManager = () => {
                   <h3 className="text-lg font-semibold">{item.name}</h3>
                   <p>Price: ${item.price}</p>
                   <p>{item.description}</p>
-                  <img src={item.image} alt={item.name} className="w-32 h-32 object-cover mt-2" />
+                  <Image src={item.image} alt={item.name} className="w-32 h-32 object-cover mt-2" />
                   <div className="mt-2">
                     <button onClick={() => handleEditItem(item)} className="bg-yellow-500 text-white p-2 rounded mr-2">Edit</button>
                     <button onClick={() => handleDeleteItem(item._id)} className="bg-red-500 text-white p-2 rounded">Delete</button>

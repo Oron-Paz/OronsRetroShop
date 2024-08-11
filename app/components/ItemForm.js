@@ -8,15 +8,43 @@ export default function ItemForm({ item, onSubmit, onCancel }) {
     price: '',
     image: ''
   });
+  const [imageFile, setImageFile] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleFileChange = (e) => {
+    setImageFile(e.target.files[0]);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    let imageUrl = formData.image;
+
+    if (imageFile) {
+      const formData = new FormData();
+      formData.append('image', imageFile);
+      
+      try {
+        const response = await fetch('/api/items/upload', {
+          method: 'POST',
+          body: formData,
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          imageUrl = data.imageUrl;
+        } else {
+          console.error('Image upload failed');
+        }
+      } catch (error) {
+        console.error('Error uploading image:', error);
+      }
+    }
+
+    onSubmit({ ...formData, image: imageUrl });
   };
 
   return (
@@ -66,7 +94,16 @@ export default function ItemForm({ item, onSubmit, onCancel }) {
           value={formData.image}
           onChange={handleChange}
           className="w-full p-2 border rounded"
-          required
+        />
+      </div>
+      <div>
+        <label htmlFor="imageFile" className="block mb-1">Upload Image</label>
+        <input
+          type="file"
+          id="imageFile"
+          onChange={handleFileChange}
+          className="w-full p-2 border rounded"
+          accept="image/*"
         />
       </div>
       <div className="flex justify-end space-x-2">

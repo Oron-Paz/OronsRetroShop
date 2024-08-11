@@ -72,7 +72,7 @@ export default function Page() {
       </form>
 
       <div className="mt-4 font-mono">
-        <p>Don't have an account? <Link href="/signup" className="text-yellow-600">Sign up</Link></p>
+        <p>Don`t have an account? <Link href="/signup" className="text-yellow-600">Sign up</Link></p>
       </div>
     </div>
   );
