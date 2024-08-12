@@ -30,14 +30,25 @@ async function getItemDetails(itemId) {
 
 
 async function getUserData(username) {
-  const filePath = path.join(DATA_DIR,  `${username}.json`);
+  const filePath = path.join(DATA_DIR, `${username}.json`);
   try {
     const data = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(data);
+    console.log(`Raw data for ${username}:`, data);
+    try {
+      return JSON.parse(data);
+    } catch (parseError) {
+      console.error(`JSON parse error for ${username}:`, parseError);
+      console.error('Error position:', parseError.position);
+      console.error('JSON substring around error:',
+        data.substring(Math.max(0, parseError.position - 20),
+                       Math.min(data.length, parseError.position + 20)));
+      throw parseError;
+    }
   } catch (error) {
     if (error.code === 'ENOENT') {
       return { username, cart: [] };
     }
+    console.error(`Error reading file for ${username}:`, error);
     throw error;
   }
 }

@@ -25,10 +25,32 @@ const PaymentPage = () => {
         setCvv(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        router.push('/paid');
-       
+        
+        try {
+            // Clear the cart in a single operation
+            const response = await fetch('/api/user/cart/clear', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to clear cart');
+            }
+    
+            // Update local state to reflect the empty cart
+            cart.forEach((item) => {
+                removeFromCart(item.id);
+            });
+    
+            router.push('/paid');
+        } catch (error) {
+            console.error('Error clearing cart:', error);
+            // Handle the error appropriately (e.g., show an error message to the user)
+        }
     };
 
     return (

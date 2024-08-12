@@ -49,6 +49,29 @@ async function getUser(username) {
   }
 }
 
+async function getUserData(username) {
+  const filePath = path.join(DATA_DIR, `${username}.json`);
+  try {
+      const data = await fs.readFile(filePath, 'utf8');
+      try {
+          return JSON.parse(data);
+      } catch (parseError) {
+          console.error(`JSON parse error for ${username}:`, parseError);
+          // Attempt to clean the data
+          const cleanedData = data.substring(0, data.lastIndexOf('}') + 1);
+          const cleanedUserData = JSON.parse(cleanedData);
+          // Save the cleaned data back to the file
+          await saveUserData(username, cleanedUserData);
+          return cleanedUserData;
+      }
+  } catch (error) {
+      if (error.code === 'ENOENT') {
+          return { username, cart: [] };
+      }
+      throw error;
+  }
+}
+
 async function updateUser(username, updateData) {
   const userFile = path.join(DATA_DIR, `${username}.json`);
   const userData = await getUser(username);
@@ -81,5 +104,6 @@ module.exports = {
   getUser,
   updateUser,
   validateUser,
-  addLoginActivity
+  addLoginActivity,
+  getUserData,
 };
