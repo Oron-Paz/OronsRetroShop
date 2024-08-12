@@ -65,14 +65,19 @@ export async function DELETE(request, { params }) {
     const itemDetails = await getItemDetails(itemId);
 
     // Remove the item from the cart
+    const removedItem = userData.cart.find(item => item.id === parseInt(itemId));
     userData.cart = userData.cart.filter(item => item.id !== parseInt(itemId));
-
-    // Log the activity with item details
-    
 
     await saveUserData(decoded.username, userData);
 
-    const name  = itemDetails ? itemDetails.name : 'Unknown Item (possibly removed from store)';
+    let name;
+    if (itemDetails) {
+      name = itemDetails.name;
+    } else if (removedItem) {
+      name = removedItem.name;
+    } else {
+      name = 'Unknown Item (removed from store)';
+    }
 
     await addLoginActivity(decoded.username, `Removed ${name} from cart`);
 

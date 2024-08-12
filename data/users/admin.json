@@ -13,196 +13,32 @@
   "purchases": [],
   "loginActivity": [
     {
-      "datetime": "2024-08-11T14:10:30.499Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-11T14:29:04.916Z",
+      "datetime": "2024-08-12T17:58:08.570Z",
       "type": "Added item Retro DVD to cart"
     },
     {
-      "datetime": "2024-08-11T14:30:50.057Z",
+      "datetime": "2024-08-12T17:59:54.231Z",
       "type": "Removed Retro DVD from cart"
     },
     {
-      "datetime": "2024-08-11T14:30:53.164Z",
+      "datetime": "2024-08-12T18:00:00.875Z",
       "type": "Added item Retro DVD to cart"
     },
     {
-      "datetime": "2024-08-11T14:30:55.378Z",
+      "datetime": "2024-08-12T18:00:02.608Z",
       "type": "Removed Retro DVD from cart"
     },
     {
-      "datetime": "2024-08-11T14:31:21.741Z",
-      "type": "Added item oron to cart"
-    },
-    {
-      "datetime": "2024-08-11T14:31:22.432Z",
+      "datetime": "2024-08-12T18:00:04.369Z",
       "type": "Added item Retro DVD to cart"
     },
     {
-      "datetime": "2024-08-11T14:31:25.228Z",
-      "type": "Updated quantity of oron in cart to 2"
-    },
-    {
-      "datetime": "2024-08-11T14:31:25.351Z",
-      "type": "Updated quantity of oron in cart to 3"
-    },
-    {
-      "datetime": "2024-08-11T14:31:32.376Z",
-      "type": "Removed oron from cart"
-    },
-    {
-      "datetime": "2024-08-11T14:31:32.868Z",
+      "datetime": "2024-08-12T18:00:09.371Z",
       "type": "Removed Retro DVD from cart"
     },
     {
-      "datetime": "2024-08-11T14:31:39.173Z",
+      "datetime": "2024-08-12T18:00:20.093Z",
       "type": "logout"
-    },
-    {
-      "datetime": "2024-08-12T00:11:08.088Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-12T00:15:19.631Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-12T00:15:37.872Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-12T00:16:14.502Z",
-      "type": "Added item Oron to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:16:15.049Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:16:18.205Z",
-      "type": "Updated quantity of Oron in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:16:19.071Z",
-      "type": "Updated quantity of Oron in cart to 3"
-    },
-    {
-      "datetime": "2024-08-12T00:16:19.499Z",
-      "type": "Updated quantity of Oron in cart to 4"
-    },
-    {
-      "datetime": "2024-08-12T00:16:20.477Z",
-      "type": "Updated quantity of Retro DVD in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:22:18.659Z",
-      "type": "Removed Oron from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:29:29.407Z",
-      "type": "logout"
-    },
-    {
-      "datetime": "2024-08-12T00:31:00.116Z",
-      "type": "login"
-    },
-    {
-      "datetime": "2024-08-12T00:31:16.878Z",
-      "type": "Removed Retro DVD from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:31:32.757Z",
-      "type": "Added item Oron to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:31:33.533Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:33:39.403Z",
-      "type": "Updated quantity of Retro DVD in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:34:01.150Z",
-      "type": "Added item swagger retro to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:42.200Z",
-      "type": "Added item Oron to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:42.561Z",
-      "type": "Updated quantity of swagger retro in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:49:43.197Z",
-      "type": "Updated quantity of Retro DVD in cart to 3"
-    },
-    {
-      "datetime": "2024-08-12T00:49:48.590Z",
-      "type": "Removed swagger retro from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:49.245Z",
-      "type": "Removed Retro DVD from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:49.883Z",
-      "type": "Removed Oron from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:52.523Z",
-      "type": "Added item swagger retro to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:53.275Z",
-      "type": "Added item Oron to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:53.978Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:49:56.167Z",
-      "type": "Updated quantity of Oron in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:56:05.287Z",
-      "type": "Removed Retro DVD from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:57:30.466Z",
-      "type": "Added item Oron to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:57:31.058Z",
-      "type": "Added item swagger retro to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:57:31.795Z",
-      "type": "Added item Retro DVD to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:57:36.817Z",
-      "type": "Updated quantity of swagger retro in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:57:42.386Z",
-      "type": "Removed Retro DVD from cart"
-    },
-    {
-      "datetime": "2024-08-12T00:59:50.279Z",
-      "type": "Added item swagger retro to cart"
-    },
-    {
-      "datetime": "2024-08-12T00:59:50.619Z",
-      "type": "Updated quantity of swagger retro in cart to 2"
-    },
-    {
-      "datetime": "2024-08-12T00:59:57.046Z",
-      "type": "Removed swagger retro from cart"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"

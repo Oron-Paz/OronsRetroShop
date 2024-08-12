@@ -33,7 +33,7 @@ async function getUserData(username) {
   const filePath = path.join(DATA_DIR, `${username}.json`);
   try {
     const data = await fs.readFile(filePath, 'utf8');
-    console.log(`Raw data for ${username}:`, data);
+    //console.log(`Raw data for ${username}:`, data);
     try {
       return JSON.parse(data);
     } catch (parseError) {
