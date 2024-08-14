@@ -1,6 +1,9 @@
+//app/api/reviews/id/route.js
+
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { verifyToken } from '../../../utils/authMiddleware';
 
 const REVIEWS_FILE = path.join(process.cwd(), 'data', 'reviews.json');
 
@@ -24,6 +27,16 @@ function saveReviews(reviews) {
 export async function POST(request, { params }) {
   const { id } = params;
   const { action } = await request.json();
+  const token = request.cookies.get('token');
+
+  if (!token) {
+    return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+  }
+
+  const decoded = verifyToken(token.value);
+  if (!decoded) {
+    return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
+  }
 
   const reviews = getReviews();
   const reviewIndex = reviews.findIndex(review => review.id.toString() === id);
@@ -33,28 +46,41 @@ export async function POST(request, { params }) {
   }
 
   const review = reviews[reviewIndex];
+  const userId = decoded.username;
 
+  // Initialize userActions if it doesn't exist
+  if (!review.userActions) {
+    review.userActions = {};
+  }
+
+  const previousAction = review.userActions[userId];
+
+  // Adjust like/dislike counts
   if (action === 'like') {
-    if (review.userAction === 'like') {
+    if (previousAction === 'like') {
+      // Remove like
       review.likes -= 1;
-      review.userAction = null;
+      review.userActions[userId] = null;
     } else {
-      if (review.userAction === 'dislike') {
+      if (previousAction === 'dislike') {
+        // Convert dislike to like
         review.dislikes -= 1;
       }
       review.likes += 1;
-      review.userAction = 'like';
+      review.userActions[userId] = 'like';
     }
   } else if (action === 'dislike') {
-    if (review.userAction === 'dislike') {
+    if (previousAction === 'dislike') {
+      // Remove dislike
       review.dislikes -= 1;
-      review.userAction = null;
+      review.userActions[userId] = null;
     } else {
-      if (review.userAction === 'like') {
+      if (previousAction === 'like') {
+        // Convert like to dislike
         review.likes -= 1;
       }
       review.dislikes += 1;
-      review.userAction = 'dislike';
+      review.userActions[userId] = 'dislike';
     }
   } else {
     return NextResponse.json({ message: 'Invalid action' }, { status: 400 });
@@ -63,6 +89,7 @@ export async function POST(request, { params }) {
   saveReviews(reviews);
   return NextResponse.json(review);
 }
+
 
 export async function DELETE(request, { params }) {
     const { id } = params;
