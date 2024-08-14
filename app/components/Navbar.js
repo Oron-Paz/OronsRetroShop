@@ -24,9 +24,11 @@ const Navbar = () => {
       { name: 'Home', path: '/' },
       { name: 'Store', path: '/store' },
       { name: 'Reviews', path: '/Reviews' },
+      
     ];
 
     if (isAuthenticated && !isAuthLoading) {
+      items.push({ name: 'Support', path: '/support' }),
       items.push({ name: 'Cart', path: '/cart' });
       items.push({ name: 'Profile', path: '/profile' });
       if (isAdmin && !isAdminLoading) {

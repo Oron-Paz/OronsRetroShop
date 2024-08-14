@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { verifyToken } from '../../utils/authMiddleware';
 
 const REVIEWS_FILE = path.join(process.cwd(), 'data', 'reviews.json');
 
@@ -27,17 +28,29 @@ export async function GET() {
 }
 
 export async function POST(request) {
+  const token = request.cookies.get('token');
+  
+  if (!token) {
+    return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+  }
+
+  const decoded = verifyToken(token.value);
+  if (!decoded) {
+    return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
+  }
+
   const { message } = await request.json();
   const reviews = getReviews();
   const newReview = {
     id: Date.now().toString(),
     message,
     likes: 0,
-    dislikes: 0
+    dislikes: 0,
+    username: decoded.username
   };
 
   reviews.unshift(newReview);
-  if (reviews.length > 10) {
+  if (reviews.length > 9) {
     reviews.pop();
   }
 

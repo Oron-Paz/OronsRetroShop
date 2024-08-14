@@ -83,6 +83,42 @@
     {
       "datetime": "2024-08-14T15:00:14.636Z",
       "type": "login"
+    },
+    {
+      "datetime": "2024-08-14T15:19:04.011Z",
+      "type": "Added item adsklj to cart"
+    },
+    {
+      "datetime": "2024-08-14T15:19:04.539Z",
+      "type": "Added item oron to cart"
+    },
+    {
+      "datetime": "2024-08-14T16:25:53.597Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-14T16:55:08.826Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-14T16:55:33.895Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-14T16:56:39.804Z",
+      "type": "Removed adsklj from cart"
+    },
+    {
+      "datetime": "2024-08-14T16:56:40.574Z",
+      "type": "Removed oron from cart"
+    },
+    {
+      "datetime": "2024-08-14T17:05:50.292Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-14T17:06:09.022Z",
+      "type": "login"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"

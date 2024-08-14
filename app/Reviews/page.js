@@ -79,6 +79,7 @@ export default function Page() {
                 {reviews.map((review) => (
                     <div key={review.id} className="mb-4 p-4 border rounded">
                         <p>{review.message}</p>
+                        <p className="text-sm text-gray-500 mt-1">Posted by: {review.username}</p>
                         <div className="mt-2">
                             <button onClick={() => handleLikeDislike(review.id, 'like')} className="mr-2">
                                 👍 {review.likes}

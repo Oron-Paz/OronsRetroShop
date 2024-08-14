@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "1723654521875",
+    "message": "hi this is my review",
+    "likes": 1,
+    "dislikes": 0,
+    "username": "oron",
+    "userAction": "like"
+  },
+  {
+    "id": "1723649105334",
+    "message": "hello",
+    "likes": 1,
+    "dislikes": 0,
+    "username": "admin",
+    "userAction": "like"
+  }
+]
