@@ -23,6 +23,7 @@ const Navbar = () => {
     const items = [
       { name: 'Home', path: '/' },
       { name: 'Store', path: '/store' },
+      { name: 'Reviews', path: '/Reviews' },
     ];
 
     if (isAuthenticated && !isAuthLoading) {
