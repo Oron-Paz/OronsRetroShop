@@ -63,3 +63,17 @@ export async function POST(request, { params }) {
   saveReviews(reviews);
   return NextResponse.json(review);
 }
+
+export async function DELETE(request, { params }) {
+    const { id } = params;
+  
+    const reviews = getReviews();
+    const updatedReviews = reviews.filter(review => review.id.toString() !== id);
+  
+    if (reviews.length === updatedReviews.length) {
+      return NextResponse.json({ message: 'Review not found' }, { status: 404 });
+    }
+  
+    saveReviews(updatedReviews);
+    return NextResponse.json({ message: 'Review deleted successfully' });
+  }

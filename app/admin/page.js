@@ -7,12 +7,13 @@ import { useRouter } from 'next/navigation';
 import ItemForm from '../components/ItemForm';
 import { useAdmin } from '../hooks/useAdmin';
 
+
 export default function AdminPage() {
   const [items, setItems] = useState([]);
   const [activities, setActivities] = useState([]);
   const [filter, setFilter] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  
+  const [reviews, setReviews] = useState([]);
   const [isAddingItem, setIsAddingItem] = useState(false);
   const [editingItem, setEditingItem] = useState(null);
   const router = useRouter();
@@ -26,8 +27,35 @@ export default function AdminPage() {
     } else if (isAdmin) {
       fetchActivities();
       fetchItems();
+      fetchReviews(); // Add this line
     }
   }, [isAdmin, isLoading, router]);
+
+
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch('/api/reviews');
+      if (response.ok) {
+        const data = await response.json();
+        setReviews(data);
+      } else {
+        console.error('Failed to fetch reviews');
+      }
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  };
+
+  const handleDeleteReview = async (id) => {
+    try {
+      const response = await fetch(`/api/reviews/${id}`, { method: 'DELETE' });
+      if (response.ok) {
+        setReviews(reviews.filter(review => review.id !== id));
+      }
+    } catch (error) {
+      console.error('Error deleting review:', error);
+    }
+  };
 
   const fetchActivities = async () => {
     try {
@@ -174,6 +202,24 @@ export default function AdminPage() {
           </div>
         </div>
       )}
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Manage Reviews</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reviews.map(review => (
+          <div key={review.id} className="border p-4 rounded">
+            <p>{review.message}</p>
+            <p>By: {review.username}</p>
+            <p>Likes: {review.likes} | Dislikes: {review.dislikes}</p>
+            <button 
+              onClick={() => handleDeleteReview(review.id)} 
+              className="bg-red-500 text-white px-2 py-1 rounded mt-2"
+            >
+              Delete Review
+            </button>
+          </div>
+        ))}
+      </div>
+
 
       <h2 className="text-2xl font-bold mt-8 mb-4">User Activities</h2>
       <div className="mb-4">
