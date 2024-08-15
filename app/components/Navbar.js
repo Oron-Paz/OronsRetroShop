@@ -30,6 +30,7 @@ const Navbar = () => {
     if (isAuthenticated && !isAuthLoading) {
       items.push({ name: 'Support', path: '/support' }),
       items.push({ name: 'Cart', path: '/cart' });
+      items.push({ name: 'Careers', path: '/careers' });
       items.push({ name: 'Profile', path: '/profile' });
       if (isAdmin && !isAdminLoading) {
         items.push({ name: 'Admin Dashboard', path: '/admin' });
