@@ -55,6 +55,38 @@
     {
       "datetime": "2024-08-14T17:50:59.304Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-15T14:49:08.940Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T14:49:32.333Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T14:49:43.375Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-15T14:51:22.577Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T15:48:47.169Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T15:48:53.239Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-16T16:36:01.466Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T16:36:14.962Z",
+      "type": "logout"
     }
   ],
   "createdAt": "2024-08-06T13:39:43.371Z"

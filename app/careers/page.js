@@ -1,13 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth'; // Adjust the import path as needed
+import { useAuth } from '../hooks/useAuth';
+import { useRouter } from 'next/navigation';
 
 export default function CareersPage() {
   const [jobs, setJobs] = useState([]);
   const [error, setError] = useState(null);
   const [application, setApplication] = useState({ jobId: null, message: '' });
-  const { user } = useAuth();
+  const { isAuthenticated, user, isLoading } = useAuth();
+
+  const router = useRouter();
 
   useEffect(() => {
     fetch('/api/jobs')
@@ -25,8 +28,10 @@ export default function CareersPage() {
   }, []);
 
   const handleApply = async (jobId) => {
-    if (!user) {
+    if (!isAuthenticated || !user) {
       alert('Please log in to apply for jobs.');
+      // Optionally, redirect to login page
+      // router.push('/login');
       return;
     }
 
@@ -42,16 +47,23 @@ export default function CareersPage() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit application');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to submit application');
       }
 
+      const result = await response.json();
+      console.log('Application submitted:', result);
       alert('Application submitted successfully!');
       setApplication({ jobId: null, message: '' });
     } catch (err) {
       console.error('Error submitting application:', err);
-      alert('Failed to submit application. Please try again.');
+      alert(err.message || 'Failed to submit application. Please try again.');
     }
   };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -60,8 +72,13 @@ export default function CareersPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Careers</h1>
+      {isAuthenticated && user ? (
+        <p className="font-bold mb-4">Welcome, {user.username}!</p>
+      ) : (
+        <p className="font-bold mb-4">Please log in to apply for jobs.</p>
+      )}
       {jobs.length === 0 ? (
-        <p>No jobs available at the moment.</p>
+        <p className="font-bold">No jobs available at the moment.</p>
       ) : (
         <div>
           {jobs.map(job => (
@@ -77,6 +94,7 @@ export default function CareersPage() {
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded"
                 onClick={() => handleApply(job.id)}
+                disabled={!isAuthenticated}
               >
                 Apply
               </button>

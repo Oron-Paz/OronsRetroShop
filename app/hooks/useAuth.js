@@ -1,4 +1,5 @@
-// app/hooks/useAuth.js
+//app/hooks/useAuth.js
+
 'use client';
 
 import { useState, useEffect, createContext, useContext, useCallback } from 'react';
@@ -8,6 +9,7 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
   const checkAuth = useCallback(async () => {
     try {
@@ -18,12 +20,15 @@ export function AuthProvider({ children }) {
       if (response.ok) {
         const data = await response.json();
         setIsAuthenticated(data.authenticated);
+        setUser(data.user);
       } else {
         setIsAuthenticated(false);
+        setUser(null);
       }
     } catch (error) {
       console.error('Auth check failed:', error);
       setIsAuthenticated(false);
+      setUser(null);
     } finally {
       setIsLoading(false);
     }
@@ -41,6 +46,7 @@ export function AuthProvider({ children }) {
       });
       if (response.ok) {
         setIsAuthenticated(false);
+        setUser(null);
       } else {
         console.error('Signout failed');
       }
@@ -50,7 +56,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, isLoading, signout, checkAuth }}>
+    <AuthContext.Provider value={{ isAuthenticated, isLoading, user, signout, checkAuth }}>
       {children}
     </AuthContext.Provider>
   );

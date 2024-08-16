@@ -13,5 +13,12 @@ export async function GET(request) {
     return NextResponse.json({ authenticated: false }, { status: 401 });
   }
 
-  return NextResponse.json({ authenticated: true }, { status: 200 });
+  // Assuming the decoded token contains user information
+  const user = {
+    id: decoded.userId,
+    username: decoded.username,
+    // Add any other user properties you want to include
+  };
+
+  return NextResponse.json({ authenticated: true, user }, { status: 200 });
 }

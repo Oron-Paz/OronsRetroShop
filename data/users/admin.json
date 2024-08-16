@@ -9,7 +9,24 @@
     "blurWidth": 8,
     "blurHeight": 8
   },
-  "cart": [],
+  "cart": [
+    {
+      "name": "GameBoy Mint Condition",
+      "description": "this mint conditions gameboy from the year 475 was used by the last emperor of the roman western empire, Romulus Augustulus.",
+      "price": "200",
+      "image": "https://imgs.search.brave.com/jvKOR34sL8o65wDZGH1ea1O2n8mXdAke8VuzirvqT70/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDY3/ODk4MDUzL3Bob3Rv/L25pbnRlbmRvLWdh/bWUtYm95LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1PNXd1/QWZhbHBHeV9JbWN1/OHpjelFXcWZ3dmlT/ZkFpakw2Qnl1M0xz/a25ZPQ",
+      "id": 4,
+      "quantity": 1
+    },
+    {
+      "name": "Retro Cassette Player",
+      "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
+      "price": "100",
+      "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
+      "id": 1,
+      "quantity": 1
+    }
+  ],
   "purchases": [],
   "loginActivity": [
     {
@@ -142,6 +159,46 @@
     },
     {
       "datetime": "2024-08-15T14:09:44.791Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-15T14:29:34.551Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T14:49:47.372Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-15T14:51:17.886Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-15T15:50:24.615Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T15:54:20.632Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T16:36:18.281Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T17:05:02.791Z",
+      "type": "Added item GameBoy Mint Condition to cart"
+    },
+    {
+      "datetime": "2024-08-16T17:05:04.315Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-16T17:24:12.938Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T17:25:11.562Z",
       "type": "logout"
     }
   ],
