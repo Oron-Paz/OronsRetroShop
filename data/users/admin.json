@@ -11,19 +11,19 @@
   },
   "cart": [
     {
-      "name": "GameBoy Mint Condition",
-      "description": "this mint conditions gameboy from the year 475 was used by the last emperor of the roman western empire, Romulus Augustulus.",
-      "price": "200",
-      "image": "https://imgs.search.brave.com/jvKOR34sL8o65wDZGH1ea1O2n8mXdAke8VuzirvqT70/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDY3/ODk4MDUzL3Bob3Rv/L25pbnRlbmRvLWdh/bWUtYm95LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1PNXd1/QWZhbHBHeV9JbWN1/OHpjelFXcWZ3dmlT/ZkFpakw2Qnl1M0xz/a25ZPQ",
-      "id": 4,
-      "quantity": 1
-    },
-    {
       "name": "Retro Cassette Player",
       "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
       "price": "100",
       "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
       "id": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Vintage Camera",
+      "description": "Still works! will take pictures in black and white (color wasn't invented yet)",
+      "price": "130",
+      "image": "https://imgs.search.brave.com/HdSK72bWDi7EGWJatHjIkD3grzzpJt7uM6khJoWbRJM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0dY/RThzaGJKVENkRDU3/cEJydTZ6clMtMzIw/LTgwLmpwZw",
+      "id": 5,
       "quantity": 1
     }
   ],
@@ -199,6 +199,34 @@
     },
     {
       "datetime": "2024-08-16T17:25:11.562Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-16T18:04:14.722Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T18:05:36.876Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-16T18:05:54.913Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T18:08:08.564Z",
+      "type": "Removed GameBoy Mint Condition from cart"
+    },
+    {
+      "datetime": "2024-08-16T18:15:04.149Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-16T18:15:05.832Z",
+      "type": "Added item Vintage Camera to cart"
+    },
+    {
+      "datetime": "2024-08-16T18:15:31.139Z",
       "type": "logout"
     }
   ],
