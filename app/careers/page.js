@@ -73,7 +73,7 @@ export default function CareersPage() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Careers</h1>
       {isAuthenticated && user ? (
-        <p className="font-bold mb-4">Welcome, {user.username}!</p>
+        <p className="mb-5 text-xl">Welcome, <span className='font-bold'>{user.username}!</span></p>
       ) : (
         <p className="font-bold mb-4">Please log in to apply for jobs.</p>
       )}
@@ -82,17 +82,17 @@ export default function CareersPage() {
       ) : (
         <div>
           {jobs.map(job => (
-            <div key={job.id} className="mb-8 p-4 border rounded">
+            <div key={job.id} className="mb-8 p-4 border rounded font-mono">
               <h2 className="text-2xl font-bold">{job.title}</h2>
               <p className="mb-4">{job.description}</p>
               <textarea
-                className="w-full p-2 mb-2 border rounded"
+                className="w-full p-2 mb-2 border rounded font-sans"
                 placeholder="Why do you think you're a good fit for this position?"
                 value={application.jobId === job.id ? application.message : ''}
                 onChange={(e) => setApplication({ jobId: job.id, message: e.target.value })}
               />
               <button
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-gray-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors"
                 onClick={() => handleApply(job.id)}
                 disabled={!isAuthenticated}
               >

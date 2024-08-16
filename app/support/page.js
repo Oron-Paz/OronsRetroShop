@@ -109,7 +109,7 @@ export default function Page() {
         {supportQuestions.map((item, index) => (
           <div key={index} className="mb-4">
             <button
-              className="w-full text-left p-2 bg-blue-100 hover:bg-blue-200 rounded"
+              className="w-full text-left p-2 bg-yellow-200 hover:bg-yellow-300 rounded"
               onClick={() => handleQuestionClick(index)}
             >
               {item.question}

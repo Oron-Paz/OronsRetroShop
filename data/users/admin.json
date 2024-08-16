@@ -11,11 +11,11 @@
   },
   "cart": [
     {
-      "name": "Retro Cassette Player",
-      "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
-      "price": "100",
-      "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
-      "id": 1,
+      "name": "Vinyl Player",
+      "description": "old school vinyl player for my old demographic",
+      "price": "50",
+      "image": "https://imgs.search.brave.com/nw5iYKbVAID_qlLnLt0LcCEhTf5kUIeQLp4nY5upCa4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzk2/OTIwOTA2LWJhYWMt/NDY2Yi1hMmE4LTdi/ZjU5NGRiODA0MS5f/X0NSMCwwLDE0NjQs/NjI1X1BUMF9TWDE0/NjRfVjFfX18uanBn",
+      "id": 2,
       "quantity": 1
     },
     {
@@ -24,6 +24,14 @@
       "price": "130",
       "image": "https://imgs.search.brave.com/HdSK72bWDi7EGWJatHjIkD3grzzpJt7uM6khJoWbRJM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0dY/RThzaGJKVENkRDU3/cEJydTZ6clMtMzIw/LTgwLmpwZw",
       "id": 5,
+      "quantity": 2
+    },
+    {
+      "name": "Retro Cassette Player",
+      "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
+      "price": "100",
+      "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
+      "id": 1,
       "quantity": 1
     }
   ],
@@ -228,6 +236,42 @@
     {
       "datetime": "2024-08-16T18:15:31.139Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-16T19:55:42.785Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-16T19:56:35.673Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-16T19:56:45.323Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-16T19:56:46.866Z",
+      "type": "Added item Vintage Camera to cart"
+    },
+    {
+      "datetime": "2024-08-16T19:56:48.433Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-16T19:56:50.758Z",
+      "type": "Updated quantity of Vinyl Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-16T19:56:52.698Z",
+      "type": "Updated quantity of Vinyl Player in cart to 1"
+    },
+    {
+      "datetime": "2024-08-16T19:56:53.505Z",
+      "type": "Updated quantity of Vintage Camera in cart to 2"
+    },
+    {
+      "datetime": "2024-08-16T20:26:40.997Z",
+      "type": "login"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"
