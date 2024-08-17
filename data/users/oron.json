@@ -95,6 +95,14 @@
     {
       "datetime": "2024-08-16T18:05:51.228Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-17T00:50:54.556Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-17T00:51:18.566Z",
+      "type": "logout"
     }
   ],
   "createdAt": "2024-08-06T13:39:43.371Z"
