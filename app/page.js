@@ -33,11 +33,11 @@ export default function Home() {
       <div className="relative z-0">
         {/* Hero section with floating objects */}
         <div className="flex flex-col items-start justify-center min-h-screen px-8 bg-white bg-opacity-80">
-          <h1 className="text-9xl font-bold text-yellow-500 mb-20 mt-16 leading-none bottom-20 ml-7">
+          <h1 className="text-9xl font-bold text-yellow-500 mb-16 mt-24 leading-none bottom-20 ml-20">
             ORONS<br />RETRO<br />SHOP
           </h1>
           {/* Cassette image */}
-          <div className="absolute top-0 right-10 mt-4">
+          <div className="absolute top-8 right-16 mt-4">
             <Image src={cassetteImage} alt="Retro Cassette" className="w-[50vw] h-auto" />
           </div>
           <div className="max-w-2xl mt-16 self-center">
@@ -50,13 +50,13 @@ export default function Home() {
   
           {/* Floating objects */}
           <div className="floating-object absolute top-1/2 left-24 w-32 h-32 ">
-            <Image src={gameboyImage} layout="fill" objectFit="contain" alt="Retro item 1" />
+            <Image src={gameboyImage} className="contain fill" alt="Retro item 1" />
           </div>
           <div className="floating-object absolute bottom-40 right-80 w-40 h-40 ">
-            <Image src={retroComp} layout="fill" objectFit="contain" alt="Retro item 2" />
+            <Image src={retroComp} className="contain fill" alt="Retro item 2" />
           </div>
           <div className="floating-object absolute bottom-1/2 right-40 w-32 h-32 ">
-            <Image src={recordPlayer} layout="fill" objectFit="contain" alt="Retro item 2" />
+            <Image src={recordPlayer}  className="contain fill" alt="Retro item 2" />
           </div>
           {/* Add more floating objects as needed */}
         </div>
