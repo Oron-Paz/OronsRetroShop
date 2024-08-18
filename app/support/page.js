@@ -101,27 +101,34 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen -mt-10">
-      <h2 className="text-2xl font-bold mb-4">Support Chat</h2>
-      <p className="text-md mb-5 text-stone-600 font-mono">Welcome to our support chat! Select one of the options below to receive answers regarding our most commonly asked questions</p>
-      
-      <div className="w-full max-w-md">
-        {supportQuestions.map((item, index) => (
-          <div key={index} className="mb-4">
-            <button
-              className="w-full text-left p-2 bg-yellow-200 hover:bg-yellow-300 rounded"
-              onClick={() => handleQuestionClick(index)}
-            >
-              {item.question}
-            </button>
-            {selectedQuestion === index && (
-              <p className="mt-2 p-2 bg-gray-100 rounded">
-                {loading ? 'Loading...' : answer}
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-stone-100 py-12 px-4">
+        <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="p-6 border-b border-gray-200">
+                <h2 className="text-3xl font-bold mb-2 text-stone-800">Support Chat</h2>
+                <p className="text-lg text-stone-600 font-mono">Welcome to our support chat! Select one of the options below to receive answers regarding our most commonly asked questions</p>
+            </div>
+            <div className="p-6">
+                {supportQuestions.map((item, index) => (
+                    <div key={index} className="mb-4">
+                        <button
+                            className="w-full text-left p-3 bg-yellow-100 hover:bg-yellow-200 rounded-lg transition duration-300 ease-in-out"
+                            onClick={() => handleQuestionClick(index)}
+                        >
+                            {item.question}
+                        </button>
+                        {selectedQuestion === index && (
+                            <div className="mt-2 p-4 bg-stone-50 rounded-lg shadow-inner">
+                                {loading ? (
+                                    <p className="text-stone-600">Loading...</p>
+                                ) : (
+                                    <p className="text-stone-800">{answer}</p>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
     </div>
   );
 }
