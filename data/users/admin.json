@@ -288,6 +288,14 @@
     {
       "datetime": "2024-08-17T21:54:15.560Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-18T05:37:57.949Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-18T06:01:30.351Z",
+      "type": "logout"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"
