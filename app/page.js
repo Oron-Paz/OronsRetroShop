@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import picture from '../public/avatar/defaultAvatar.png';
 import cassetteImage from '../public/site/music-can.webp';
 import retroComp from '../public/site/retroComp.png';
 import gameboyImage from '../public/site/Game-Boy-FL.png';
@@ -46,7 +45,7 @@ export default function Home() {
       {/* Main content */}
       <div className="relative z-0">
         {/* Hero section with floating objects */}
-        <div className="flex flex-col items-start justify-center min-h-screen px-4 md:px-8 bg-white bg-opacity-80">
+        <div className="flex flex-col items-start justify-center min-h-screen px-4 md:px-8">
           <h1 className={`text-9xl font-bold text-yellow-500 mb-16 mt-24 leading-none ${isMobile ? 'self-center' : 'ml-20'}`}>
             ORONS<br />RETRO<br />SHOP
           </h1>

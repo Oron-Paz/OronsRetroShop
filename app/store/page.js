@@ -1,11 +1,15 @@
+//app/store/page.js
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import Item from '../components/Item';
+import Notification from '../components/Notification';
 
 export default function StorePage() {
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [notification, setNotification] = useState(null);
 
   useEffect(() => {
     // Fetch items from your API
@@ -23,6 +27,13 @@ export default function StorePage() {
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const showNotification = (message) => {
+    setNotification(message);
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000);
+  }
+
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -39,9 +50,11 @@ export default function StorePage() {
           <Item
             key={item.id}
             {...item}
+            onAddToCart={() => showNotification(`${item.name} added to cart`)}
           />
         ))}
       </div>
+      {notification && <Notification message={notification} onClose={() => setNotification(null)} />}
     </div>
   );
 }

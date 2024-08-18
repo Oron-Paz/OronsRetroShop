@@ -24,15 +24,15 @@
       "price": "130",
       "image": "https://imgs.search.brave.com/HdSK72bWDi7EGWJatHjIkD3grzzpJt7uM6khJoWbRJM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0dY/RThzaGJKVENkRDU3/cEJydTZ6clMtMzIw/LTgwLmpwZw",
       "id": 5,
-      "quantity": 2
+      "quantity": 3
     },
     {
-      "name": "Retro Cassette Player",
-      "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
-      "price": "100",
-      "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
-      "id": 1,
-      "quantity": 1
+      "name": "Mystery Vinyl Collection",
+      "description": "who knows what youll get? maybe really good songs, maybe really bad songs...\nincludes 15 vintage vinyl records",
+      "price": "50",
+      "image": "https://imgs.search.brave.com/2shcO99hArpSIGggtOLKHna8AJPmlX45LZ5Ngcf0bSc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTI1/MTQ1MjEvcGhvdG8v/dmlueWwtcmVjb3Jk/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9enhYU2lqTkdz/bnRVU2toYl9zempf/dGx5OUx0NjV6aWpm/clpXLU40b2JCWT0",
+      "id": 3,
+      "quantity": 2
     }
   ],
   "purchases": [],
@@ -308,6 +308,206 @@
     {
       "datetime": "2024-08-18T18:54:33.975Z",
       "type": "login"
+    },
+    {
+      "datetime": "2024-08-18T19:05:36.137Z",
+      "type": "Updated quantity of Vinyl Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:05:47.970Z",
+      "type": "Added item Mystery Vinyl Collection to cart"
+    },
+    {
+      "datetime": "2024-08-18T19:06:04.178Z",
+      "type": "Updated quantity of Retro Cassette Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:06:07.675Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:06:11.870Z",
+      "type": "Updated quantity of Vinyl Player in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:06:12.578Z",
+      "type": "Updated quantity of Vintage Camera in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:06:13.625Z",
+      "type": "Updated quantity of Retro Cassette Player in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:06:15.125Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-18T19:07:49.708Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-18T19:07:53.736Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:07:55.762Z",
+      "type": "Updated quantity of Vinyl Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:07:58.043Z",
+      "type": "Updated quantity of Vintage Camera in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:08:23.126Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 4"
+    },
+    {
+      "datetime": "2024-08-18T19:08:29.321Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 5"
+    },
+    {
+      "datetime": "2024-08-18T19:08:32.619Z",
+      "type": "Updated quantity of Vintage Camera in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:08:34.014Z",
+      "type": "Updated quantity of Vinyl Player in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:08:42.844Z",
+      "type": "Updated quantity of Vinyl Player in cart to 4"
+    },
+    {
+      "datetime": "2024-08-18T19:08:44.002Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 6"
+    },
+    {
+      "datetime": "2024-08-18T19:08:48.756Z",
+      "type": "Updated quantity of Vintage Camera in cart to 4"
+    },
+    {
+      "datetime": "2024-08-18T19:08:49.925Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 7"
+    },
+    {
+      "datetime": "2024-08-18T19:09:02.495Z",
+      "type": "Updated quantity of Vinyl Player in cart to 5"
+    },
+    {
+      "datetime": "2024-08-18T19:09:03.578Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 8"
+    },
+    {
+      "datetime": "2024-08-18T19:09:05.327Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 9"
+    },
+    {
+      "datetime": "2024-08-18T19:09:05.992Z",
+      "type": "Updated quantity of Vinyl Player in cart to 6"
+    },
+    {
+      "datetime": "2024-08-18T19:09:06.693Z",
+      "type": "Updated quantity of Vinyl Player in cart to 7"
+    },
+    {
+      "datetime": "2024-08-18T19:09:12.143Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 8"
+    },
+    {
+      "datetime": "2024-08-18T19:09:12.325Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 7"
+    },
+    {
+      "datetime": "2024-08-18T19:09:12.497Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 6"
+    },
+    {
+      "datetime": "2024-08-18T19:09:12.692Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 5"
+    },
+    {
+      "datetime": "2024-08-18T19:09:12.903Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 4"
+    },
+    {
+      "datetime": "2024-08-18T19:09:13.108Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:09:13.334Z",
+      "type": "Updated quantity of Mystery Vinyl Collection in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:09:17.895Z",
+      "type": "Updated quantity of Vinyl Player in cart to 6"
+    },
+    {
+      "datetime": "2024-08-18T19:09:18.045Z",
+      "type": "Updated quantity of Vinyl Player in cart to 5"
+    },
+    {
+      "datetime": "2024-08-18T19:09:18.194Z",
+      "type": "Updated quantity of Vinyl Player in cart to 4"
+    },
+    {
+      "datetime": "2024-08-18T19:09:18.359Z",
+      "type": "Updated quantity of Vinyl Player in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:09:18.534Z",
+      "type": "Updated quantity of Vinyl Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:09:19.225Z",
+      "type": "Updated quantity of Vinyl Player in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:09:20.258Z",
+      "type": "Updated quantity of Vintage Camera in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:09:20.410Z",
+      "type": "Updated quantity of Vintage Camera in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:09:20.791Z",
+      "type": "Updated quantity of Vintage Camera in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:09:21.775Z",
+      "type": "Updated quantity of Vintage Camera in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:09:21.908Z",
+      "type": "Updated quantity of Vintage Camera in cart to 3"
+    },
+    {
+      "datetime": "2024-08-18T19:09:23.375Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-18T19:09:33.529Z",
+      "type": "Added item GameBoy Mint Condition to cart"
+    },
+    {
+      "datetime": "2024-08-18T19:09:40.805Z",
+      "type": "Updated quantity of Vinyl Player in cart to 2"
+    },
+    {
+      "datetime": "2024-08-18T19:09:47.414Z",
+      "type": "Removed GameBoy Mint Condition from cart"
+    },
+    {
+      "datetime": "2024-08-18T19:09:48.472Z",
+      "type": "Updated quantity of Vinyl Player in cart to 1"
+    },
+    {
+      "datetime": "2024-08-18T19:12:27.905Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-18T19:12:36.144Z",
+      "type": "Removed Retro Cassette Player from cart"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"

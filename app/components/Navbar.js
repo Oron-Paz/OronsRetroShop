@@ -47,7 +47,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-stone-800 p-3 relative">
+    <nav className="bg-stone-800 p-3 relative z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white font-bold text-xl">
           OronsRetroShop

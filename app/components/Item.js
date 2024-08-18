@@ -6,7 +6,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useCart } from '../hooks/useCart.js';
 import { useRouter } from 'next/navigation';
 
-export default function Item({ id, name, description, image, price }) {
+export default function Item({ id, name, description, image, price , onAddToCart }) {
   const { isAuthenticated } = useAuth();
   const { addToCart } = useCart();
   const router = useRouter();
@@ -15,6 +15,7 @@ export default function Item({ id, name, description, image, price }) {
     if (!isAuthenticated) {
       router.push('/signin');
     } else {
+      onAddToCart();
       addToCart({ id, name, description, price, quantity: 1 });
     }
   };
