@@ -9,32 +9,7 @@
     "blurWidth": 8,
     "blurHeight": 8
   },
-  "cart": [
-    {
-      "name": "Vinyl Player",
-      "description": "old school vinyl player for my old demographic",
-      "price": "50",
-      "image": "https://imgs.search.brave.com/nw5iYKbVAID_qlLnLt0LcCEhTf5kUIeQLp4nY5upCa4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzk2/OTIwOTA2LWJhYWMt/NDY2Yi1hMmE4LTdi/ZjU5NGRiODA0MS5f/X0NSMCwwLDE0NjQs/NjI1X1BUMF9TWDE0/NjRfVjFfX18uanBn",
-      "id": 2,
-      "quantity": 1
-    },
-    {
-      "name": "Vintage Camera",
-      "description": "Still works! will take pictures in black and white (color wasn't invented yet)",
-      "price": "130",
-      "image": "https://imgs.search.brave.com/HdSK72bWDi7EGWJatHjIkD3grzzpJt7uM6khJoWbRJM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0dY/RThzaGJKVENkRDU3/cEJydTZ6clMtMzIw/LTgwLmpwZw",
-      "id": 5,
-      "quantity": 3
-    },
-    {
-      "name": "Mystery Vinyl Collection",
-      "description": "who knows what youll get? maybe really good songs, maybe really bad songs...\nincludes 15 vintage vinyl records",
-      "price": "50",
-      "image": "https://imgs.search.brave.com/2shcO99hArpSIGggtOLKHna8AJPmlX45LZ5Ngcf0bSc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTI1/MTQ1MjEvcGhvdG8v/dmlueWwtcmVjb3Jk/cy5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9enhYU2lqTkdz/bnRVU2toYl9zempf/dGx5OUx0NjV6aWpm/clpXLU40b2JCWT0",
-      "id": 3,
-      "quantity": 2
-    }
-  ],
+  "cart": [],
   "purchases": [],
   "loginActivity": [
     {
@@ -507,6 +482,130 @@
     },
     {
       "datetime": "2024-08-18T19:12:36.144Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-19T16:24:39.253Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T16:55:03.627Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T16:55:03.659Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T16:55:03.694Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T16:55:03.765Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-19T16:59:10.413Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T16:59:10.546Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T16:59:10.660Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T16:59:11.637Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-19T17:17:02.074Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:17:07.446Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-19T17:17:07.974Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-19T17:17:08.570Z",
+      "type": "Added item Mystery Vinyl Collection to cart"
+    },
+    {
+      "datetime": "2024-08-19T17:19:04.269Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:19:14.582Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:19:14.615Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:19:14.881Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T17:19:15.299Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-19T17:21:43.030Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:03.028Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:03.169Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:03.288Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T17:22:22.239Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:28.502Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:28.529Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:28.560Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T17:22:28.605Z",
+      "type": "Removed Retro Cassette Player from cart"
+    },
+    {
+      "datetime": "2024-08-19T17:22:56.822Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:56.846Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T17:22:56.876Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T17:22:56.916Z",
       "type": "Removed Retro Cassette Player from cart"
     }
   ],

@@ -1,3 +1,5 @@
+//app/api/auth/login/route.js
+
 import { validateUser, addLoginActivity } from '../../../utils/userManager';
 import { generateToken } from '../../../utils/authMiddleware';
 import { NextResponse } from 'next/server';

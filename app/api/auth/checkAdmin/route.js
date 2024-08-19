@@ -1,4 +1,6 @@
 // app/api/auth/checkAdmin/route.js
+
+
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
 

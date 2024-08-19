@@ -1,3 +1,5 @@
+// app/api/user/update-avatar/route.js
+
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
 import { getUser, updateUser } from '../../../utils/userManager';

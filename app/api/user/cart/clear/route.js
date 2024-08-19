@@ -1,3 +1,5 @@
+//app/api/user/cart/clear/route.js
+
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../../utils/authMiddleware';
 import { getUserData, updateUser } from '../../../../utils/userManager';

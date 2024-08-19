@@ -1,4 +1,6 @@
-// pages/api/items/route.js
+// app/api/items/route.js
+
+
 import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';

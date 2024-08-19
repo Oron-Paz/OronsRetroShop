@@ -1,3 +1,5 @@
+//app/api/auth/check/route.js
+
 import { verifyToken } from '../../../utils/authMiddleware';
 import { NextResponse } from 'next/server';
 

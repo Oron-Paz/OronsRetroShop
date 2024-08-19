@@ -1,3 +1,5 @@
+//app/api/user/purchases/route.js
+
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
 import { getUser } from '../../../utils/userManager';

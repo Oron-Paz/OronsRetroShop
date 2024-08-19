@@ -1,4 +1,6 @@
 // app/api/auth/signout/route.js
+
+
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
 import { addLoginActivity } from '../../../utils/userManager'; // Make sure this import is correct

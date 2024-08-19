@@ -1,3 +1,5 @@
+//app/api/auth/register/route.js
+
 import { createUser, getUser } from '../../../utils/userManager';
 import { NextResponse } from 'next/server';
 
