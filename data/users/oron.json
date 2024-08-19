@@ -9,7 +9,24 @@
     "blurWidth": 8,
     "blurHeight": 8
   },
-  "cart": [],
+  "cart": [
+    {
+      "name": "Vinyl Player",
+      "description": "old school vinyl player for my old demographic",
+      "price": "50",
+      "image": "https://imgs.search.brave.com/nw5iYKbVAID_qlLnLt0LcCEhTf5kUIeQLp4nY5upCa4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzk2/OTIwOTA2LWJhYWMt/NDY2Yi1hMmE4LTdi/ZjU5NGRiODA0MS5f/X0NSMCwwLDE0NjQs/NjI1X1BUMF9TWDE0/NjRfVjFfX18uanBn",
+      "id": 2,
+      "quantity": 1
+    },
+    {
+      "name": "Retro Cassette Player",
+      "description": "This retro cassette player is from the Paleolithic age, truly one of humanities greatest inventions at the time :)",
+      "price": "100",
+      "image": "https://imgs.search.brave.com/ILo4fqsozt-OKwf6X_YxeMANIAC3iwVWWdajHqoslF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cmV0cm9zdHlsZW1l/ZGlhLmNvLnVrL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzA5/L3BvcnRhYmxlLXN0/ZXJlby1jYXNzZXR0/ZS10YXBlLXBsYXll/ci1yZXRyby5qcGc",
+      "id": 1,
+      "quantity": 1
+    }
+  ],
   "purchases": [],
   "loginActivity": [
     {
@@ -102,6 +119,22 @@
     },
     {
       "datetime": "2024-08-17T00:51:18.566Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-19T22:51:54.519Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-19T22:52:05.875Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-19T22:52:06.788Z",
+      "type": "Added item Retro Cassette Player to cart"
+    },
+    {
+      "datetime": "2024-08-19T22:52:11.498Z",
       "type": "logout"
     }
   ],
