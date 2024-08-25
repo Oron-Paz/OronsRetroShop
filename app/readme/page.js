@@ -4,6 +4,37 @@ const Page = () => {
     return (
         <div className="max-w-4xl mx-auto p-6 font-sans text-gray-800">
             <h1 className="text-3xl font-bold text-center text-yellow-800 border-b-2 border-yellow-500 pb-4 mb-8">READ ME</h1>
+
+            <section className="bg-gray-100 rounded-lg p-6 mb-8 shadow-md">
+
+              <h2 className="text-2xl font-semibold text-yellow-700 mb-4">
+                0. IMPORTANT STUFF TO EXPLAIN
+              </h2>
+              <p>
+                Known issues: when starting the server navbar will say loading after
+                refreshing the page it will work fine, this only happens when you
+                first start the server for the life of me i couldnt figure out how to
+                fix it, i think its because the navbar is rendered before
+                authentication completes so its left in a weird state. Another issue
+                is that the test.js file is called test.mjs with an 'm' before the
+                'js' this is because i couldnt get the test to run with the .js
+                extension, i tried changing the package.json file to run the test with
+                the .js extension but it didnt work. Lastly regarding persist.js i
+                couldnt figure out what that meant i think you wanted to keep all the
+                data in the same js file but I think it wouldve been a very messy long
+                file with lots of data so i made a data folder called 'data' and in it
+                its orgenized into categories, the data is fetched through the api
+                calls in the api folder, and in there they are all named accordingly
+                so I hope its clear what does what. further explanation: I took your
+                advice and tried my shot at using react, i went to the current react
+                guide and installed next.js and react. To run the website need to type
+                npm run dev or npm run start if youre not going to be changing
+                anything, also its probably noticable that I used tailwind this was
+                also a new exprieince for me, which was quite neat and while at first
+                was a bit to learn by the end of the website it made the styling very
+                easy to control how I wanted.
+              </p>
+            </section>
             
             <section className="bg-gray-100 rounded-lg p-6 mb-8 shadow-md">
                 <h2 className="text-2xl font-semibold text-yellow-700 mb-4">1. Author</h2>
