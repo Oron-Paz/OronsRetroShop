@@ -219,6 +219,22 @@
     {
       "datetime": "2024-08-29T14:14:15.099Z",
       "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T15:22:43.149Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T15:30:05.753Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-29T15:30:08.394Z",
+      "type": "Removed Vinyl Player from cart"
+    },
+    {
+      "datetime": "2024-08-29T15:30:32.139Z",
+      "type": "logout"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"
