@@ -17,6 +17,8 @@ export default function AdminPage() {
   const [isAddingItem, setIsAddingItem] = useState(false);
   const [editingItem, setEditingItem] = useState(null);
 
+  const [purchases, setPurchases] = useState([]);
+
   const [showJobContent, setShowJobContent] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [applications, setApplications] = useState([]);
@@ -39,6 +41,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (showJobContent) {
+      fetchPurchases();
       fetchJobs();
       fetchApplications();
     }

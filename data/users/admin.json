@@ -147,6 +147,78 @@
     {
       "datetime": "2024-08-25T21:52:10.433Z",
       "type": "logout"
+    },
+    {
+      "datetime": "2024-08-29T13:21:45.532Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T13:44:54.733Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-29T13:52:31.194Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T13:52:34.651Z",
+      "type": "Removed Vinyl Player from cart"
+    },
+    {
+      "datetime": "2024-08-29T13:52:38.253Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-29T13:52:43.835Z",
+      "type": "Purchase"
+    },
+    {
+      "datetime": "2024-08-29T13:52:44.316Z",
+      "type": "Removed Vinyl Player from cart"
+    },
+    {
+      "datetime": "2024-08-29T13:55:34.553Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-29T13:56:02.750Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T14:06:59.348Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-29T14:07:06.958Z",
+      "type": "login"
+    },
+    {
+      "datetime": "2024-08-29T14:07:28.982Z",
+      "type": "Added item Vinyl Player to cart"
+    },
+    {
+      "datetime": "2024-08-29T14:07:29.530Z",
+      "type": "Added item Mystery Vinyl Collection to cart"
+    },
+    {
+      "datetime": "2024-08-29T14:07:35.152Z",
+      "type": "Purchased Cart"
+    },
+    {
+      "datetime": "2024-08-29T14:08:17.180Z",
+      "type": "Purchased Cart"
+    },
+    {
+      "datetime": "2024-08-29T14:08:17.197Z",
+      "type": "Removed Vinyl Player from cart"
+    },
+    {
+      "datetime": "2024-08-29T14:14:06.361Z",
+      "type": "logout"
+    },
+    {
+      "datetime": "2024-08-29T14:14:15.099Z",
+      "type": "login"
     }
   ],
   "createdAt": "2024-08-11T14:10:27.491Z"

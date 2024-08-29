@@ -1,10 +1,10 @@
-//app/api/user/purchases/route.js
+// pages/api/user/purchase.js
 
 import { NextResponse } from 'next/server';
 import { verifyToken } from '../../../utils/authMiddleware';
-import { getUser } from '../../../utils/userManager';
+import { addLoginActivity, getUser } from '../../../utils/userManager';
 
-export async function GET(request) {
+export async function POST(request) {
   const token = request.cookies.get('token');
   
   if (!token) {
@@ -22,9 +22,13 @@ export async function GET(request) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    return NextResponse.json(user.purchases, { status: 200 });
+    const { items, totalAmount } = await request.json();
+
+    await addLoginActivity(user.username, 'Purchased Cart', { items, totalAmount });
+    
+    return NextResponse.json({ message: 'Purchase recorded successfully' }, { status: 200 });
   } catch (error) {
-    console.error('Error fetching user purchases:', error);
-    return NextResponse.json({ error: 'Error fetching user purchases' }, { status: 500 });
+    console.error('Error recording purchase:', error);
+    return NextResponse.json({ error: 'Failed to record purchase' }, { status: 500 });
   }
 }
