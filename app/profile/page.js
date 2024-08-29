@@ -19,7 +19,6 @@ export default function ProfilePage() {
       router.push('/signin');
     } else if (isAuthenticated) {
       fetchUserData();
-      fetchPastPurchases();
     }
   }, [isAuthenticated, isLoading, router]);
 
@@ -39,21 +38,6 @@ export default function ProfilePage() {
     }
   };
 
-  const fetchPastPurchases = async () => {
-    try {
-      const response = await fetch('/api/user/purchases', {
-        credentials: 'include',
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setPastPurchases(data);
-      } else {
-        console.error('Failed to fetch past purchases');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
 
   const handleAvatarChange = async (e) => {
     e.preventDefault();
@@ -148,10 +132,6 @@ export default function ProfilePage() {
           <div>
             <p className="font-semibold">Member Since:</p>
             <p>{new Date(userData.createdAt).toLocaleDateString()}</p>
-          </div>
-          <div>
-            <p className="font-semibold">Total Purchases:</p>
-            <p>{pastPurchases.length}</p>
           </div>
           <div>
             <p className="font-semibold">Account Status:</p>
